@@ -1,120 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Madeline Starr | Marketing & Sales</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Website</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation is automatically added by nav.js -->
+    <div class="site-wrapper">
 
-    <main>
+        <!-- ================= HEADER ================= -->
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-text">
-                <p class="eyebrow">HELLO, I'M</p>
+        <header class="site-header">
 
-                <h1>Madeline<br>Starr ♡</h1>
-
-                <p class="intro">
-                    Marketing student, professional sales enthusiast,
-                    and future residential real estate professional.
-                </p>
-
-                <a href="school-life.html" class="cute-button">
-                    Get to know me →
+            <div class="logo-area">
+                <a href="index.html">
+                    Logo
                 </a>
             </div>
 
-            <div class="hero-decoration">
-                <div class="blob">
-                    <span>✿</span>
+            <div class="header-right">
+
+                <div class="header-info">
+                    This area is for informational graphics
+                    which describe what your site is about.
                 </div>
-            </div>
-        </section>
 
+                <!-- JavaScript inserts navigation here -->
+                <div id="site-navigation"></div>
 
-        <!-- About Me -->
-        <section class="about">
-            <div class="section-heading">
-                <span>♡</span>
-                <h2>A Little About Me</h2>
-                <span>♡</span>
             </div>
 
-            <div class="about-card">
+        </header>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-layout">
+
+            <!-- LEFT NAVIGATION -->
+
+            <aside class="left-sidebar">
+
+                <h2>Primary Navigation</h2>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </aside>
+
+
+            <!-- MAIN CONTENT -->
+
+            <section class="content-area">
+
+                <div class="hero-image">
+
+                    <img
+                        src="images/hero.jpg"
+                        alt="Website hero image"
+                    >
+
+                </div>
+
+                <h1>Main Content Area</h1>
+
                 <p>
-                    Hi! I'm Madeline, a senior at Iowa State University
-                    studying Marketing and earning my Professional Sales
-                    Certificate.
+                    Welcome to our website. This is the main
+                    content area where your page information,
+                    images, articles and other important content
+                    can be displayed.
                 </p>
 
                 <p>
-                    I've always enjoyed connecting with people, building
-                    relationships, and finding creative ways to bring ideas
-                    to life. My experiences in marketing and sales have
-                    helped me discover that I want to build a career where
-                    I can combine both of those passions.
+                    You can replace this text with approximately
+                    400 words of HTML content for your individual
+                    pages. Unlike the original wireframe, this
+                    area supports normal responsive images and
+                    properly structured HTML.
                 </p>
 
-                <p>
-                    My goal is to work in residential new-construction
-                    real estate, helping people find and create homes
-                    that fit their lives. I love the idea of being part
-                    of such an exciting and personal experience while
-                    building lasting relationships with clients.
-                </p>
-            </div>
-        </section>
+            </section>
 
 
-        <!-- Career Goals -->
-        <section class="goals">
-            <div class="goal-card">
-                <span class="card-icon">📚</span>
-                <h3>Marketing</h3>
-                <p>
-                    Learning how creativity, strategy, and communication
-                    can connect brands with people.
-                </p>
-            </div>
+            <!-- RIGHT SIDEBAR -->
 
-            <div class="goal-card">
-                <span class="card-icon">💬</span>
-                <h3>Professional Sales</h3>
-                <p>
-                    Building relationships, understanding people's needs,
-                    and creating value through communication.
-                </p>
-            </div>
+            <aside class="right-sidebar">
 
-            <div class="goal-card">
-                <span class="card-icon">🏡</span>
-                <h3>Real Estate</h3>
-                <p>
-                    My goal is to bring my marketing and sales skills into
-                    residential new-construction real estate.
-                </p>
-            </div>
-        </section>
+                <div class="sticky-content">
+
+                    <h2>Sticky Content</h2>
+
+                    <ul>
+                        <li>
+                            <a href="#">News Items</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Advertisements</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Offers</a>
+                        </li>
+
+                        <li>
+                            <a href="#">General Site Info</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Social Media</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </aside>
+
+        </main>
 
 
-        <!-- Footer -->
-        <footer>
-            <p>Made with ♡ by Madeline Starr</p>
-            <p>Iowa State University • Marketing • Professional Sales</p>
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="site-footer">
+
+            <span>
+                © 2026 My Website
+            </span>
+
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="sitemap.html">Sitemap</a>
+
         </footer>
 
-    </main>
+    </div>
+
 
     <!-- Reusable navigation -->
-    <script src="nav.js"></script>
+
+    <script src="navigation.js"></script>
 
 </body>
+
 </html>
