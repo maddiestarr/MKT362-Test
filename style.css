@@ -1,11 +1,17 @@
 /* =========================================================
-   RESET
+   WEBSITE STYLE
+   GitHub Pages / Static Website
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
    ========================================================= */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -14,28 +20,37 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f8dfe8;
-    color: #111;
+    font-size: 16px;
     line-height: 1.5;
+    color: #111111;
+
+    /*
+     * LIGHT PINK BACKGROUND
+     *
+     * The website itself is 80% wide.
+     * This leaves approximately 10% of the viewport
+     * visible as pink on each side.
+     */
+    background-color: #f8dfe8;
+
+    min-height: 100vh;
 }
 
 
 /* =========================================================
-   WEBSITE CONTAINER
-   80% WIDTH = 10% BACKGROUND ON EACH SIDE
+   2. MAIN WEBSITE CONTAINER
    ========================================================= */
 
 .site-wrapper {
     width: 80%;
-    max-width: 1400px;
     min-height: 100vh;
 
     margin: 0 auto;
 
-    background: #fff;
+    background-color: #ffffff;
 
-    border-left: 2px solid #222;
-    border-right: 2px solid #222;
+    border-left: 2px solid #222222;
+    border-right: 2px solid #222222;
 
     display: flex;
     flex-direction: column;
@@ -43,22 +58,27 @@ body {
 
 
 /* =========================================================
-   HEADER
+   3. HEADER
    ========================================================= */
 
 .site-header {
     display: grid;
+
+    /*
+     * Left side = logo
+     * Right side = description + navigation
+     */
     grid-template-columns: 20% 80%;
 
-    border-top: 2px solid #222;
-    border-bottom: 2px solid #222;
+    background-color: #ffffff;
 
-    background: #fff;
+    border-top: 2px solid #222222;
+    border-bottom: 2px solid #222222;
 }
 
 
 /* =========================================================
-   LOGO
+   4. LOGO
    ========================================================= */
 
 .logo-area {
@@ -68,20 +88,26 @@ body {
     align-items: center;
     justify-content: center;
 
-    border-right: 2px solid #222;
+    border-right: 2px solid #222222;
 }
 
 .logo-area a {
-    color: #111;
+    color: #111111;
+
     text-decoration: none;
 
     font-size: clamp(2rem, 4vw, 3rem);
+
     font-weight: 400;
+}
+
+.logo-area a:hover {
+    color: #555555;
 }
 
 
 /* =========================================================
-   HEADER INFORMATION
+   5. HEADER DESCRIPTION
    ========================================================= */
 
 .header-right {
@@ -97,12 +123,12 @@ body {
     display: flex;
     align-items: center;
 
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 
 /* =========================================================
-   TOP HORIZONTAL NAVIGATION
+   6. NAVIGATION CONTAINER
    ========================================================= */
 
 #site-navigation {
@@ -110,19 +136,21 @@ body {
 }
 
 
-/* Primary navigation */
+/* =========================================================
+   7. PRIMARY NAVIGATION
+   ========================================================= */
 
 .primary-navigation {
     width: 100%;
-
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
 
     min-height: 32px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
 }
 
 .primary-navigation ul {
@@ -132,14 +160,16 @@ body {
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
 
     flex-wrap: wrap;
 }
 
 .primary-navigation li {
-    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .primary-navigation a {
@@ -147,8 +177,11 @@ body {
 
     padding: 5px 20px;
 
-    color: #111;
+    color: #111111;
+
     text-decoration: none;
+
+    font-size: 15px;
 
     transition:
         background-color 0.2s ease,
@@ -156,17 +189,17 @@ body {
 }
 
 .primary-navigation a:hover {
-    background: #f8dfe8;
+    background-color: #f8dfe8;
 }
 
 .primary-navigation a.active {
-    background: #111;
-    color: #fff;
+    background-color: #111111;
+    color: #ffffff;
 }
 
 
 /* =========================================================
-   SECONDARY NAVIGATION
+   8. SECONDARY NAVIGATION
    ========================================================= */
 
 .secondary-navigation {
@@ -186,10 +219,16 @@ body {
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
 
     flex-wrap: wrap;
+}
+
+.secondary-navigation li {
+    margin: 0;
+    padding: 0;
 }
 
 .secondary-navigation a {
@@ -197,16 +236,19 @@ body {
 
     padding: 4px 15px;
 
-    color: #111;
+    color: #111111;
+
     text-decoration: none;
 
-    font-size: 0.9rem;
+    font-size: 14px;
 
-    transition: background-color 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .secondary-navigation a:hover {
-    background: #f8dfe8;
+    background-color: #f8dfe8;
 }
 
 .secondary-navigation a.active {
@@ -215,17 +257,16 @@ body {
 
 
 /* =========================================================
-   MAIN CONTENT
+   9. MAIN LAYOUT
    ========================================================= */
 
 .main-layout {
-
     /*
-       Main content = 75%
-       Right sidebar = 25%
-    */
-
+     * Main content = 75%
+     * Sidebar     = 25%
+     */
     display: grid;
+
     grid-template-columns: 75% 25%;
 
     flex: 1;
@@ -235,38 +276,88 @@ body {
 
 
 /* =========================================================
-   CONTENT AREA
+   10. MAIN CONTENT
    ========================================================= */
 
 .content-area {
     padding: 18px 22px 40px;
 
-    background: #fff;
+    background-color: #ffffff;
 
     min-width: 0;
 }
 
+.content-area h1 {
+    margin-bottom: 15px;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+}
+
+.content-area h2 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+
+    font-size: 22px;
+}
+
+.content-area h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.content-area p {
+    margin-bottom: 15px;
+}
+
+.content-area ul,
+.content-area ol {
+    margin-bottom: 20px;
+
+    padding-left: 25px;
+}
+
+.content-area li {
+    margin-bottom: 6px;
+}
+
+.content-area a {
+    color: #111111;
+}
+
+.content-area a:hover {
+    color: #555555;
+}
+
 
 /* =========================================================
-   HERO IMAGE
+   11. HERO IMAGE
    ========================================================= */
 
 .hero-image {
     width: 70%;
+
     min-height: 120px;
 
     margin-bottom: 20px;
 
-    border: 2px solid #222;
+    border: 2px solid #222222;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     overflow: hidden;
+
+    background-color: #eeeeee;
 }
 
 .hero-image img {
+    display: block;
+
     width: 100%;
     height: 100%;
 
@@ -274,30 +365,14 @@ body {
 }
 
 .hero-placeholder {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 
 /* =========================================================
-   CONTENT TYPOGRAPHY
+   12. NORMAL CONTENT IMAGES
    ========================================================= */
-
-.content-area h1 {
-    font-size: 1.7rem;
-
-    margin-bottom: 15px;
-}
-
-.content-area h2 {
-    font-size: 1.4rem;
-
-    margin-bottom: 15px;
-}
-
-.content-area p {
-    margin-bottom: 15px;
-}
 
 .content-area img {
     max-width: 100%;
@@ -306,48 +381,54 @@ body {
 
 
 /* =========================================================
-   RIGHT STICKY SIDEBAR
+   13. RIGHT SIDEBAR
    ========================================================= */
 
 .right-sidebar {
+    background-color: #ffffff;
 
-    border-left: 2px solid #222;
+    border-left: 2px solid #222222;
 
     padding: 40px 25px;
-
-    background: #fff;
 }
 
+
+/* =========================================================
+   14. STICKY SIDEBAR CONTENT
+   ========================================================= */
 
 .sticky-content {
     position: sticky;
+
     top: 20px;
 }
 
-
 .sticky-content h2 {
-    font-size: 1.1rem;
-
     margin-bottom: 15px;
+
+    font-size: 20px;
 }
 
+.sticky-content h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    font-size: 16px;
+}
 
 .sticky-content ul {
     list-style: none;
 }
 
-
 .sticky-content li {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
-
 .sticky-content a {
-    color: #111;
+    color: #111111;
 
     text-decoration: none;
 }
-
 
 .sticky-content a:hover {
     text-decoration: underline;
@@ -355,31 +436,7 @@ body {
 
 
 /* =========================================================
-   FOOTER
-   ========================================================= */
-
-.site-footer {
-    border-top: 2px solid #222;
-
-    min-height: 54px;
-
-    padding: 10px 30px;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 0.85rem;
-}
-
-.site-footer a {
-    color: #111;
-
-    margin-left: 15px;
-}
-
-
-/* =========================================================
-   BUTTON
+   15. BUTTON
    ========================================================= */
 
 .button {
@@ -387,47 +444,81 @@ body {
 
     padding: 9px 18px;
 
-    background: #111;
-    color: #fff;
+    background-color: #111111;
+
+    color: #ffffff !important;
+
+    border: 2px solid #111111;
 
     text-decoration: none;
 
-    border: 2px solid #111;
-
-    transition: all 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .button:hover {
-    background: #f8dfe8;
-    color: #111;
+    background-color: #f8dfe8;
+
+    color: #111111 !important;
 }
 
 
 /* =========================================================
-   TABLETS
+   16. FOOTER
    ========================================================= */
 
-@media (max-width: 900px) {
+.site-footer {
+    min-height: 54px;
+
+    padding: 10px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    border-top: 2px solid #222222;
+
+    background-color: #ffffff;
+
+    font-size: 14px;
+}
+
+.site-footer a {
+    margin-left: 15px;
+
+    color: #111111;
+
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   17. TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
 
     .site-wrapper {
-        width: 94%;
+        width: 90%;
     }
 
     .site-header {
-        grid-template-columns: 1fr;
+        grid-template-columns: 25% 75%;
     }
 
-    .logo-area {
-        min-height: 90px;
-
-        border-right: none;
-        border-bottom: 1px solid #222;
+    .primary-navigation a {
+        padding: 5px 12px;
     }
 
-    .header-info {
-        justify-content: center;
-
-        text-align: center;
+    .secondary-navigation a {
+        padding: 4px 10px;
     }
 
     .main-layout {
@@ -438,17 +529,19 @@ body {
         width: 100%;
     }
 
-    .primary-navigation a {
-        padding: 6px 12px;
-    }
 }
 
 
 /* =========================================================
-   MOBILE
+   18. MOBILE
    ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
+
+    /*
+     * On small screens the pink margins are reduced so
+     * the website remains usable.
+     */
 
     .site-wrapper {
         width: 100%;
@@ -457,10 +550,37 @@ body {
         border-right: none;
     }
 
-    /*
-       Navigation remains horizontal where possible,
-       but wraps onto additional lines.
-    */
+
+    /* Header becomes vertical */
+
+    .site-header {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Logo */
+
+    .logo-area {
+        min-height: 90px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #222222;
+    }
+
+
+    /* Description */
+
+    .header-info {
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 15px;
+    }
+
+
+    /* Navigation */
 
     .primary-navigation ul,
     .secondary-navigation ul {
@@ -469,45 +589,112 @@ body {
 
     .primary-navigation a {
         padding: 7px 10px;
-        font-size: 0.9rem;
+
+        font-size: 14px;
     }
 
     .secondary-navigation a {
         padding: 5px 10px;
+
+        font-size: 13px;
     }
 
-    /*
-       Stack main content and sidebar.
-    */
+
+    /* Main layout */
 
     .main-layout {
         grid-template-columns: 1fr;
     }
 
-    .right-sidebar {
-        border-left: none;
-        border-top: 2px solid #222;
 
-        padding: 25px;
-    }
-
-    .sticky-content {
-        position: static;
-    }
+    /* Content */
 
     .content-area {
         padding: 20px;
     }
 
+
+    /* Hero */
+
+    .hero-image {
+        width: 100%;
+    }
+
+
+    /* Sidebar */
+
+    .right-sidebar {
+        border-left: none;
+
+        border-top: 2px solid #222222;
+
+        padding: 25px;
+    }
+
+
+    .sticky-content {
+        position: static;
+    }
+
+
+    /* Footer */
+
     .site-footer {
-        flex-direction: column;
+        justify-content: center;
 
         text-align: center;
-
-        gap: 5px;
     }
 
     .site-footer a {
-        margin-left: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   19. VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .primary-navigation ul,
+    .secondary-navigation ul {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .primary-navigation li,
+    .secondary-navigation li {
+        width: 100%;
+    }
+
+    .primary-navigation a,
+    .secondary-navigation a {
+        width: 100%;
+
+        text-align: center;
+
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .content-area h1 {
+        font-size: 24px;
+    }
+
+    .content-area h2 {
+        font-size: 20px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .site-footer a {
+        margin: 0;
     }
 }
