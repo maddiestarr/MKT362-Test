@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --cream: #fffaf7;
+    --pink: #f3d4cb;
+    --light-pink: #f9e5df;
+    --rose: #c98270;
+    --dark-rose: #8b5549;
+    --brown: #604c48;
+    --soft-brown: #9d817a;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--brown);
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Hero */
+.hero {
+    max-width: 1100px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 80px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.eyebrow {
+    color: var(--rose);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 10px 0 20px;
+    color: var(--dark-rose);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(60px, 8vw, 100px);
+    line-height: .9;
+}
+
+.intro {
+    max-width: 480px;
+    color: var(--soft-brown);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Button */
+.cute-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 23px;
+    border-radius: 30px;
+    background: var(--dark-rose);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.cute-button:hover {
+    background: var(--rose);
+    transform: translateY(-3px);
+}
+
+/* Decorative circle */
+.blob {
+    width: 310px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 48% 52% 63% 37%;
+    background: var(--pink);
+    transform: rotate(-8deg);
+}
+
+.blob span {
+    font-size: 80px;
+    color: white;
+}
+
+/* About */
+.about {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--dark-rose);
+    font-size: 40px;
+}
+
+.section-heading span {
+    color: var(--rose);
+}
+
+.about-card {
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(100, 70, 60, .07);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.about-card p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Career cards */
+.goals {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 40px 30px 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.goal-card {
+    padding: 30px;
+    background: var(--light-pink);
+    border-radius: 25px;
+    text-align: center;
+    transition: .25s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(100, 70, 60, .08);
+}
+
+.card-icon {
+    font-size: 35px;
+}
+
+.goal-card h3 {
+    color: var(--dark-rose);
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+.goal-card p {
+    color: var(--soft-brown);
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    padding: 35px;
+    background: var(--pink);
+    color: var(--dark-rose);
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        padding: 60px 25px;
+        text-align: center;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .goals {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
