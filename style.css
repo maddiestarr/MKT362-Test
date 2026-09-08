@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL RESET
+   RESET
    ========================================================= */
 
 * {
@@ -14,24 +14,25 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f8dfe8; /* Light pink background */
+    background: #f8dfe8;
     color: #111;
     line-height: 1.5;
 }
 
+
 /* =========================================================
-   MAIN WEBSITE CONTAINER
-   80% OF SCREEN WIDTH
-   10% BACKGROUND ON EACH SIDE
+   WEBSITE CONTAINER
+   80% WIDTH = 10% BACKGROUND ON EACH SIDE
    ========================================================= */
 
 .site-wrapper {
     width: 80%;
     max-width: 1400px;
-    margin: 0 auto;
-    background: #fff;
-
     min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #fff;
 
     border-left: 2px solid #222;
     border-right: 2px solid #222;
@@ -40,6 +41,7 @@ body {
     flex-direction: column;
 }
 
+
 /* =========================================================
    HEADER
    ========================================================= */
@@ -47,12 +49,17 @@ body {
 .site-header {
     display: grid;
     grid-template-columns: 20% 80%;
+
     border-top: 2px solid #222;
     border-bottom: 2px solid #222;
+
     background: #fff;
 }
 
-/* Logo */
+
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .logo-area {
     min-height: 115px;
@@ -67,11 +74,15 @@ body {
 .logo-area a {
     color: #111;
     text-decoration: none;
+
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 400;
 }
 
-/* Header information */
+
+/* =========================================================
+   HEADER INFORMATION
+   ========================================================= */
 
 .header-right {
     display: flex;
@@ -79,9 +90,9 @@ body {
 }
 
 .header-info {
-    flex: 1;
+    min-height: 64px;
 
-    padding: 14px 24px;
+    padding: 12px 24px;
 
     display: flex;
     align-items: center;
@@ -89,45 +100,52 @@ body {
     font-size: 1rem;
 }
 
+
 /* =========================================================
-   NAVIGATION
+   TOP HORIZONTAL NAVIGATION
    ========================================================= */
 
-.primary-navigation,
-.secondary-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-top: 1px solid #222;
-
-    min-height: 28px;
-}
-
-.primary-navigation {
-    min-height: 30px;
-}
-
-.secondary-navigation {
-    min-height: 28px;
-}
-
-.primary-navigation ul,
-.secondary-navigation ul {
-    list-style: none;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+#site-navigation {
     width: 100%;
 }
 
-.primary-navigation a,
-.secondary-navigation a {
+
+/* Primary navigation */
+
+.primary-navigation {
+    width: 100%;
+
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+
+    min-height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-navigation ul {
+    width: 100%;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.primary-navigation li {
+    display: block;
+}
+
+.primary-navigation a {
     display: block;
 
-    padding: 4px 18px;
+    padding: 5px 20px;
 
     color: #111;
     text-decoration: none;
@@ -137,81 +155,107 @@ body {
         color 0.2s ease;
 }
 
-.primary-navigation a:hover,
+.primary-navigation a:hover {
+    background: #f8dfe8;
+}
+
+.primary-navigation a.active {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =========================================================
+   SECONDARY NAVIGATION
+   ========================================================= */
+
+.secondary-navigation {
+    width: 100%;
+
+    min-height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondary-navigation ul {
+    width: 100%;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.secondary-navigation a {
+    display: block;
+
+    padding: 4px 15px;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: background-color 0.2s ease;
+}
+
 .secondary-navigation a:hover {
     background: #f8dfe8;
 }
 
-.primary-navigation a.active,
 .secondary-navigation a.active {
-    background: #111;
-    color: #fff;
+    font-weight: bold;
 }
+
 
 /* =========================================================
    MAIN CONTENT
    ========================================================= */
 
 .main-layout {
-    display: grid;
 
     /*
-       Left navigation = 20%
-       Main content     = 60%
-       Right sidebar    = 20%
+       Main content = 75%
+       Right sidebar = 25%
     */
-    grid-template-columns: 20% 60% 20%;
+
+    display: grid;
+    grid-template-columns: 75% 25%;
 
     flex: 1;
 
     min-height: 500px;
 }
 
-/* =========================================================
-   LEFT SIDEBAR
-   ========================================================= */
-
-.left-sidebar {
-    border-right: 2px solid #222;
-    padding: 45px 20px;
-}
-
-.left-sidebar h2 {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.left-sidebar ul {
-    list-style: none;
-}
-
-.left-sidebar li {
-    margin-bottom: 15px;
-}
-
-.left-sidebar a {
-    color: #111;
-    text-decoration: none;
-}
-
-.left-sidebar a:hover {
-    text-decoration: underline;
-}
 
 /* =========================================================
    CONTENT AREA
    ========================================================= */
 
 .content-area {
-    padding: 18px 16px 40px;
+    padding: 18px 22px 40px;
+
     background: #fff;
+
+    min-width: 0;
 }
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
 
 .hero-image {
     width: 70%;
-    min-height: 85px;
+    min-height: 120px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     border: 2px solid #222;
 
@@ -225,6 +269,7 @@ body {
 .hero-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 }
 
@@ -233,17 +278,21 @@ body {
     font-weight: 600;
 }
 
-.content-area h1,
-.content-area h2 {
-    margin-bottom: 15px;
-}
+
+/* =========================================================
+   CONTENT TYPOGRAPHY
+   ========================================================= */
 
 .content-area h1 {
     font-size: 1.7rem;
+
+    margin-bottom: 15px;
 }
 
 .content-area h2 {
     font-size: 1.4rem;
+
+    margin-bottom: 15px;
 }
 
 .content-area p {
@@ -255,41 +304,55 @@ body {
     height: auto;
 }
 
+
 /* =========================================================
    RIGHT STICKY SIDEBAR
    ========================================================= */
 
 .right-sidebar {
+
     border-left: 2px solid #222;
+
     padding: 40px 25px;
+
+    background: #fff;
 }
+
 
 .sticky-content {
     position: sticky;
     top: 20px;
 }
 
+
 .sticky-content h2 {
     font-size: 1.1rem;
+
     margin-bottom: 15px;
 }
+
 
 .sticky-content ul {
     list-style: none;
 }
 
+
 .sticky-content li {
     margin-bottom: 8px;
 }
 
+
 .sticky-content a {
     color: #111;
+
     text-decoration: none;
 }
+
 
 .sticky-content a:hover {
     text-decoration: underline;
 }
+
 
 /* =========================================================
    FOOTER
@@ -310,11 +373,13 @@ body {
 
 .site-footer a {
     color: #111;
-    margin-left: 10px;
+
+    margin-left: 15px;
 }
 
+
 /* =========================================================
-   BUTTONS / GENERAL ELEMENTS
+   BUTTON
    ========================================================= */
 
 .button {
@@ -337,15 +402,12 @@ body {
     color: #111;
 }
 
+
 /* =========================================================
-   MOBILE RESPONSIVE DESIGN
+   TABLETS
    ========================================================= */
 
 @media (max-width: 900px) {
-
-    /*
-       Give the site more width on smaller screens.
-    */
 
     .site-wrapper {
         width: 94%;
@@ -357,73 +419,80 @@ body {
 
     .logo-area {
         min-height: 90px;
+
         border-right: none;
+        border-bottom: 1px solid #222;
     }
 
     .header-info {
         justify-content: center;
+
         text-align: center;
     }
 
     .main-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .left-sidebar,
-    .right-sidebar {
-        border: none;
-        border-bottom: 2px solid #222;
-    }
-
-    .left-sidebar {
-        padding: 25px;
-    }
-
-    .left-sidebar ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 20px;
-    }
-
-    .left-sidebar li {
-        margin: 0;
-    }
-
-    .right-sidebar {
-        padding: 25px;
-    }
-
-    .sticky-content {
-        position: static;
+        grid-template-columns: 70% 30%;
     }
 
     .hero-image {
         width: 100%;
     }
+
+    .primary-navigation a {
+        padding: 6px 12px;
+    }
 }
 
+
 /* =========================================================
-   VERY SMALL SCREENS
+   MOBILE
    ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     .site-wrapper {
         width: 100%;
+
         border-left: none;
         border-right: none;
     }
 
+    /*
+       Navigation remains horizontal where possible,
+       but wraps onto additional lines.
+    */
+
     .primary-navigation ul,
     .secondary-navigation ul {
-        flex-direction: column;
+        justify-content: center;
     }
 
-    .primary-navigation a,
+    .primary-navigation a {
+        padding: 7px 10px;
+        font-size: 0.9rem;
+    }
+
     .secondary-navigation a {
-        text-align: center;
-        padding: 8px;
-        border-bottom: 1px solid #ddd;
+        padding: 5px 10px;
+    }
+
+    /*
+       Stack main content and sidebar.
+    */
+
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .right-sidebar {
+        border-left: none;
+        border-top: 2px solid #222;
+
+        padding: 25px;
+    }
+
+    .sticky-content {
+        position: static;
     }
 
     .content-area {
@@ -432,7 +501,13 @@ body {
 
     .site-footer {
         flex-direction: column;
+
         text-align: center;
+
         gap: 5px;
+    }
+
+    .site-footer a {
+        margin-left: 0;
     }
 }
