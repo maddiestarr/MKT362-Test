@@ -1,192 +1,438 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
 
-:root {
-    --cream: #fffaf7;
-    --pink: #f3d4cb;
-    --light-pink: #f9e5df;
-    --rose: #c98270;
-    --dark-rose: #8b5549;
-    --brown: #604c48;
-    --soft-brown: #9d817a;
-    --white: #ffffff;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--brown);
-    font-family: "DM Sans", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8dfe8; /* Light pink background */
+    color: #111;
+    line-height: 1.5;
 }
 
-/* Hero */
-.hero {
-    max-width: 1100px;
-    min-height: 600px;
+/* =========================================================
+   MAIN WEBSITE CONTAINER
+   80% OF SCREEN WIDTH
+   10% BACKGROUND ON EACH SIDE
+   ========================================================= */
+
+.site-wrapper {
+    width: 80%;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 80px 50px;
+    background: #fff;
+
+    min-height: 100vh;
+
+    border-left: 2px solid #222;
+    border-right: 2px solid #222;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    background: #fff;
+}
+
+/* Logo */
+
+.logo-area {
+    min-height: 115px;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
+    border-right: 2px solid #222;
 }
 
-.eyebrow {
-    color: var(--rose);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-.hero h1 {
-    margin: 10px 0 20px;
-    color: var(--dark-rose);
-    font-family: "Playfair Display", serif;
-    font-size: clamp(60px, 8vw, 100px);
-    line-height: .9;
-}
-
-.intro {
-    max-width: 480px;
-    color: var(--soft-brown);
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-/* Button */
-.cute-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 13px 23px;
-    border-radius: 30px;
-    background: var(--dark-rose);
-    color: white;
+.logo-area a {
+    color: #111;
     text-decoration: none;
-    font-weight: 600;
-    transition: .25s ease;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
 }
 
-.cute-button:hover {
-    background: var(--rose);
-    transform: translateY(-3px);
+/* Header information */
+
+.header-right {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Decorative circle */
-.blob {
-    width: 310px;
-    height: 310px;
+.header-info {
+    flex: 1;
+
+    padding: 14px 24px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1rem;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.primary-navigation,
+.secondary-navigation {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 48% 52% 63% 37%;
-    background: var(--pink);
-    transform: rotate(-8deg);
+
+    border-top: 1px solid #222;
+
+    min-height: 28px;
 }
 
-.blob span {
-    font-size: 80px;
-    color: white;
+.primary-navigation {
+    min-height: 30px;
 }
 
-/* About */
-.about {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 70px 30px;
+.secondary-navigation {
+    min-height: 28px;
 }
 
-.section-heading {
+.primary-navigation ul,
+.secondary-navigation ul {
+    list-style: none;
+
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 35px;
+
+    width: 100%;
 }
 
-.section-heading h2 {
-    font-family: "Playfair Display", serif;
-    color: var(--dark-rose);
-    font-size: 40px;
+.primary-navigation a,
+.secondary-navigation a {
+    display: block;
+
+    padding: 4px 18px;
+
+    color: #111;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
-.section-heading span {
-    color: var(--rose);
+.primary-navigation a:hover,
+.secondary-navigation a:hover {
+    background: #f8dfe8;
 }
 
-.about-card {
-    padding: 40px;
-    background: white;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(100, 70, 60, .07);
-    line-height: 1.8;
-    font-size: 16px;
+.primary-navigation a.active,
+.secondary-navigation a.active {
+    background: #111;
+    color: #fff;
 }
 
-.about-card p {
-    margin-top: 0;
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-layout {
+    display: grid;
+
+    /*
+       Left navigation = 20%
+       Main content     = 60%
+       Right sidebar    = 20%
+    */
+    grid-template-columns: 20% 60% 20%;
+
+    flex: 1;
+
+    min-height: 500px;
+}
+
+/* =========================================================
+   LEFT SIDEBAR
+   ========================================================= */
+
+.left-sidebar {
+    border-right: 2px solid #222;
+    padding: 45px 20px;
+}
+
+.left-sidebar h2 {
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-/* Career cards */
-.goals {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 40px 30px 90px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.left-sidebar ul {
+    list-style: none;
 }
 
-.goal-card {
-    padding: 30px;
-    background: var(--light-pink);
-    border-radius: 25px;
-    text-align: center;
-    transition: .25s ease;
+.left-sidebar li {
+    margin-bottom: 15px;
 }
 
-.goal-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 25px rgba(100, 70, 60, .08);
+.left-sidebar a {
+    color: #111;
+    text-decoration: none;
 }
 
-.card-icon {
-    font-size: 35px;
+.left-sidebar a:hover {
+    text-decoration: underline;
 }
 
-.goal-card h3 {
-    color: var(--dark-rose);
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
+/* =========================================================
+   CONTENT AREA
+   ========================================================= */
+
+.content-area {
+    padding: 18px 16px 40px;
+    background: #fff;
 }
 
-.goal-card p {
-    color: var(--soft-brown);
-    line-height: 1.6;
+.hero-image {
+    width: 70%;
+    min-height: 85px;
+
+    margin-bottom: 18px;
+
+    border: 2px solid #222;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
 }
 
-/* Footer */
-footer {
-    padding: 35px;
-    background: var(--pink);
-    color: var(--dark-rose);
-    text-align: center;
-    font-size: 13px;
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-@media (max-width: 700px) {
-    .hero {
-        padding: 60px 25px;
-        text-align: center;
+.hero-placeholder {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.content-area h1,
+.content-area h2 {
+    margin-bottom: 15px;
+}
+
+.content-area h1 {
+    font-size: 1.7rem;
+}
+
+.content-area h2 {
+    font-size: 1.4rem;
+}
+
+.content-area p {
+    margin-bottom: 15px;
+}
+
+.content-area img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   RIGHT STICKY SIDEBAR
+   ========================================================= */
+
+.right-sidebar {
+    border-left: 2px solid #222;
+    padding: 40px 25px;
+}
+
+.sticky-content {
+    position: sticky;
+    top: 20px;
+}
+
+.sticky-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.sticky-content ul {
+    list-style: none;
+}
+
+.sticky-content li {
+    margin-bottom: 8px;
+}
+
+.sticky-content a {
+    color: #111;
+    text-decoration: none;
+}
+
+.sticky-content a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    border-top: 2px solid #222;
+
+    min-height: 54px;
+
+    padding: 10px 30px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 0.85rem;
+}
+
+.site-footer a {
+    color: #111;
+    margin-left: 10px;
+}
+
+/* =========================================================
+   BUTTONS / GENERAL ELEMENTS
+   ========================================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    background: #111;
+    color: #fff;
+
+    text-decoration: none;
+
+    border: 2px solid #111;
+
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background: #f8dfe8;
+    color: #111;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /*
+       Give the site more width on smaller screens.
+    */
+
+    .site-wrapper {
+        width: 94%;
     }
 
-    .hero-decoration {
-        display: none;
-    }
-
-    .goals {
+    .site-header {
         grid-template-columns: 1fr;
     }
 
-    .section-heading h2 {
-        font-size: 30px;
+    .logo-area {
+        min-height: 90px;
+        border-right: none;
+    }
+
+    .header-info {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        border: none;
+        border-bottom: 2px solid #222;
+    }
+
+    .left-sidebar {
+        padding: 25px;
+    }
+
+    .left-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    .left-sidebar li {
+        margin: 0;
+    }
+
+    .right-sidebar {
+        padding: 25px;
+    }
+
+    .sticky-content {
+        position: static;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-wrapper {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
+    .primary-navigation ul,
+    .secondary-navigation ul {
+        flex-direction: column;
+    }
+
+    .primary-navigation a,
+    .secondary-navigation a {
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
     }
 }
