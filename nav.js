@@ -1,249 +1,123 @@
 /* =====================================================
-   MADELINE STARR WEBSITE
-   SHARED NAVIGATION SYSTEM
+   MADELINE STARR
+   SHARED WEBSITE NAVIGATION
 
-   This file creates:
+   Use on every page with:
 
-   1. Logo
-   2. Informational header
-   3. Primary navigation
-   4. Secondary navigation
-   5. Left sidebar navigation
+   <div id="site-navigation"></div>
 
-   Use this SAME file on every page.
+   and:
+
+   <script src="nav.js"></script>
 ===================================================== */
 
 
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    /* =================================================
-       TOP NAVIGATION
-    ================================================= */
-
-    const navigationContainer =
+    const navigation =
         document.getElementById("site-navigation");
 
 
-    if (navigationContainer) {
+    if (!navigation) {
 
-        navigationContainer.innerHTML = `
+        console.error(
+            "Could not find #site-navigation"
+        );
 
-            <header class="site-header">
-
-
-                <!-- LOGO -->
-
-                <div class="logo-area">
-
-                    <a href="index.html">
-
-                        <span class="logo-heart">♡</span>
-
-                        <span class="logo-name">
-                            Madeline
-                        </span>
-
-                        <small>
-                            Starr
-                        </small>
-
-                    </a>
-
-                </div>
+        return;
+    }
 
 
+    navigation.innerHTML = `
 
-                <!-- RIGHT HEADER -->
+        <nav class="site-nav">
 
-                <div class="header-right">
+            <div class="nav-container">
 
 
-                    <!-- INFORMATIONAL AREA -->
+                <!-- =================================
+                     LOGO / NAME
+                ================================== -->
 
-                    <div class="info-area">
-
-                        <div>
-
-                            <p class="info-label">
-                                ♡ Welcome to my website
-                            </p>
-
-                            <h2>
-                                Marketing • Sales • Real Estate
-                            </h2>
-
-                            <p>
-                                Learn a little about me, my life at
-                                Iowa State University, and my future
-                                career goals.
-                            </p>
-
-                        </div>
-
-                    </div>
+                <a
+                    href="index.html"
+                    class="nav-logo"
+                >
+                    Madeline Starr
+                </a>
 
 
 
-                    <!-- PRIMARY NAVIGATION -->
+                <!-- =================================
+                     NAVIGATION LINKS
 
-                    <nav
-                        class="primary-nav"
-                        aria-label="Primary navigation"
-                    >
+                     Left → right across the top
+                ================================== -->
+
+                <ul class="nav-links">
+
+
+                    <li>
 
                         <a href="index.html#about">
                             About Me
                         </a>
 
+                    </li>
+
+
+                    <li>
+
                         <a href="index.html#picture">
                             My Picture
                         </a>
 
-                        <a href="index.html#school">
-                            My Title in School
+                    </li>
+
+
+                    <li>
+
+                        <a href="index.html#education">
+                            My Education
                         </a>
 
-                        <a href="index.html#life">
-                            My Life in School
+                    </li>
+
+
+                    <li>
+
+                        <a href="index.html#school-life">
+                            My School Life
                         </a>
 
-                    </nav>
+                    </li>
 
 
+                    <li>
 
-                    <!-- SECONDARY NAVIGATION -->
-
-                    <nav
-                        class="secondary-nav"
-                        aria-label="Secondary navigation"
-                    >
-
-                        <a href="index.html#about">
-                            About
+                        <a href="index.html#personal">
+                            Personal
                         </a>
 
-                        <a href="index.html#picture">
-                            Photo
-                        </a>
+                    </li>
 
-                        <a href="index.html#school">
-                            Education
-                        </a>
 
-                        <a href="index.html#life">
-                            Organizations
-                        </a>
+                    <li>
 
-                        <a href="index.html#life">
+                        <a href="index.html#future">
                             Future Goals
                         </a>
 
-                    </nav>
+                    </li>
 
 
-                </div>
+                </ul>
 
-            </header>
+            </div>
 
-        `;
+        </nav>
 
-    }
-
-
-
-    /* =================================================
-       LEFT SIDEBAR NAVIGATION
-
-       This is here because the original wireframe
-       has navigation in the left column too.
-    ================================================= */
-
-    const sideNavigation =
-        document.getElementById("side-navigation");
-
-
-    if (sideNavigation) {
-
-        sideNavigation.innerHTML = `
-
-            <nav
-                class="side-nav"
-                aria-label="Side navigation"
-            >
-
-                <a href="index.html#about">
-
-                    <span>♡</span>
-
-                    <div>
-                        <strong>
-                            About Me
-                        </strong>
-
-                        <small>
-                            Get to know me
-                        </small>
-                    </div>
-
-                </a>
-
-
-                <a href="index.html#picture">
-
-                    <span>♡</span>
-
-                    <div>
-                        <strong>
-                            My Picture
-                        </strong>
-
-                        <small>
-                            Meet Madeline
-                        </small>
-                    </div>
-
-                </a>
-
-
-                <a href="index.html#school">
-
-                    <span>♡</span>
-
-                    <div>
-                        <strong>
-                            My Title in School
-                        </strong>
-
-                        <small>
-                            Iowa State
-                        </small>
-                    </div>
-
-                </a>
-
-
-                <a href="index.html#life">
-
-                    <span>♡</span>
-
-                    <div>
-                        <strong>
-                            My School Life
-                        </strong>
-
-                        <small>
-                            Clubs & activities
-                        </small>
-                    </div>
-
-                </a>
-
-
-            </nav>
-
-        `;
-
-    }
+    `;
 
 });
