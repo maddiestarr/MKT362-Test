@@ -1,5 +1,5 @@
 /* =========================================
-   RESET
+   GENERAL SETTINGS
 ========================================= */
 
 * {
@@ -13,234 +13,126 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3d3035;
-    background: #fceff4;
-}
+    font-family: "Quicksand", sans-serif;
 
+    /* Light pink background */
+    background-color: #fde8f1;
 
-/* =========================================
-   OUTER BACKGROUND
+    color: #5c3a49;
 
-   This creates the large background area
-   surrounding the website like your image.
-========================================= */
-
-.background {
-    min-height: 100vh;
-    padding: 0;
-    background: #fceff4;
+    line-height: 1.6;
 }
 
 
 /* =========================================
    MAIN WEBSITE
-
-   The reference image is a fixed-width
-   centered layout.
 ========================================= */
 
 .website {
-    width: 690px;
+    width: 80%;
     margin: 0 auto;
-    background: #ffffff;
-    border-left: 2px solid #333;
-    border-right: 2px solid #333;
-    border-bottom: 2px solid #333;
+
+    min-height: 100vh;
+
+    background-color: #fffafd;
+
+    box-shadow:
+        0 0 30px rgba(214, 105, 145, 0.12);
 }
 
 
 /* =========================================
-   HEADER
+   NAVIGATION
 ========================================= */
 
-.header {
-    height: 116px;
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    border-top: 2px solid #333;
-    border-bottom: 1px solid #333;
+.site-nav {
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(255, 250, 253, 0.96);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 2px solid #f6c6d9;
+
+    box-shadow:
+        0 4px 15px rgba(190, 87, 127, 0.08);
 }
 
 
-/* =========================================
-   LOGO
-========================================= */
+/* Navigation contents */
 
-.logo {
+.nav-inner {
+    width: 100%;
+
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    font-family: Georgia, serif;
-    font-size: 34px;
-    color: #b85c7d;
-
-    border-right: 1px solid #333;
-
-    background: #fff7fa;
+    padding: 15px 25px;
 }
 
 
-/* =========================================
-   HEADER RIGHT SIDE
-========================================= */
+/* Logo */
 
-.header-right {
-    display: grid;
-    grid-template-rows: 64px 26px 26px;
-}
+.nav-logo {
+    color: #d85c91;
 
+    font-size: 1.4rem;
 
-/* =========================================
-   INFORMATION GRAPHIC
-========================================= */
+    font-weight: 700;
 
-.graphic-area {
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-
-    background: #ffffff;
-
-    border-bottom: 1px solid #333;
-}
-
-.graphic-area p {
-    font-size: 14px;
-    line-height: 1.3;
-}
-
-
-/* =========================================
-   PRIMARY NAVIGATION
-   HORIZONTAL
-========================================= */
-
-.primary-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #f9dce7;
-
-    border-bottom: 1px solid #333;
-}
-
-.primary-nav a {
-    text-decoration: none;
-    color: #4c343d;
-
-    font-size: 13px;
-
-    padding: 4px 12px;
-}
-
-.primary-nav a:hover {
-    color: #b34f74;
-}
-
-
-/* =========================================
-   SECONDARY NAVIGATION
-========================================= */
-
-.secondary-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #fff5f8;
-}
-
-.secondary-nav a {
-    text-decoration: none;
-    color: #6c515b;
-
-    font-size: 12px;
-
-    padding: 4px 15px;
-}
-
-.secondary-nav a:hover {
-    color: #b34f74;
-}
-
-
-/* =========================================
-   THREE COLUMN BODY
-
-   This directly recreates the major
-   structure in your reference image.
-========================================= */
-
-.body-layout {
-    display: grid;
-
-    grid-template-columns: 160px 370px 158px;
-
-    min-height: 650px;
-}
-
-
-/* =========================================
-   LEFT COLUMN
-========================================= */
-
-.left-column {
-    border-right: 1px solid #333;
-
-    padding: 45px 20px;
-
-    background: #fffafb;
-}
-
-.left-column h3 {
-    font-family: Georgia, serif;
-    color: #a64f70;
-
-    font-size: 18px;
-
-    margin-bottom: 25px;
-}
-
-.side-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-}
-
-.side-nav a {
     text-decoration: none;
 
-    color: #58434b;
-
-    font-size: 14px;
-}
-
-.side-nav a:hover {
-    color: #b44f74;
-}
-
-.side-decoration {
-    margin-top: 80px;
-
-    text-align: center;
-
-    color: #d37b9b;
-
-    font-size: 25px;
-
-    line-height: 2;
+    white-space: nowrap;
 }
 
 
-/* =========================================
-   MAIN CONTENT
-========================================= */
+/* Navigation links */
 
-.main-content {
-    background: #ffffff;
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+    color: #75485b;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 0.95rem;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.nav-links a:hover {
+    color: white;
+
+    background-color: #e982ad;
+
+    transform: translateY(-2px);
 }
 
 
@@ -249,46 +141,115 @@ body {
 ========================================= */
 
 .hero {
-    padding: 20px 16px 35px;
+    min-height: 380px;
 
-    border-bottom: 1px solid #333;
-}
-
-.hero-image {
-    height: 85px;
+    padding: 70px 8%;
 
     display: flex;
+
     align-items: center;
-    justify-content: center;
 
-    background: #f8d9e4;
+    justify-content: space-between;
 
-    border: 1px solid #d9a8ba;
+    overflow: hidden;
 
-    margin-bottom: 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #ffe1ed
+        );
+
+    border-bottom: 2px solid #f8cbdc;
+
+    position: relative;
 }
 
-.flower {
-    font-size: 55px;
-    color: #bd6687;
+
+.hero-text {
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
-.hero h1 {
-    font-family: Georgia, serif;
 
-    font-size: 29px;
+.small-heading {
+    color: #d85c91;
 
-    color: #a94e70;
+    font-weight: 700;
 
     margin-bottom: 10px;
 }
 
-.intro {
-    font-size: 14px;
 
-    line-height: 1.6;
+.hero h1 {
+    color: #c94d82;
 
-    color: #66535a;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+.hero p:not(.small-heading) {
+    font-size: 1.1rem;
+
+    color: #765264;
+
+    margin-bottom: 25px;
+}
+
+
+/* Cute button */
+
+.cute-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #df709f;
+
+    padding: 12px 23px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 6px 15px rgba(211, 87, 137, 0.2);
+
+    transition: all 0.25s ease;
+}
+
+
+.cute-button:hover {
+    background: #c94d82;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 20px rgba(211, 87, 137, 0.25);
+}
+
+
+/* Big decorative heart */
+
+.hero-decoration {
+    color: #f3a8c4;
+
+    font-size: 13rem;
+
+    opacity: 0.45;
+
+    transform: rotate(10deg);
+
+    user-select: none;
 }
 
 
@@ -297,370 +258,370 @@ body {
 ========================================= */
 
 .content-section {
-    padding: 28px 16px;
+    padding: 70px 8%;
 
-    border-bottom: 1px solid #eee0e5;
-}
-
-.content-section h2 {
-    font-family: Georgia, serif;
-
-    color: #a94e70;
-
-    font-size: 24px;
-
-    margin-bottom: 15px;
-}
-
-.content-section p {
-    font-size: 13px;
-
-    line-height: 1.65;
-
-    color: #59464e;
-
-    margin-bottom: 12px;
+    scroll-margin-top: 80px;
 }
 
 
-/* =========================================
-   ORGANIZATIONS
-========================================= */
-
-.organization-list {
-    margin-top: 22px;
-}
-
-.organization {
+.section-title {
     display: flex;
 
-    gap: 12px;
+    justify-content: center;
 
-    padding: 13px 0;
+    align-items: center;
 
-    border-bottom: 1px solid #f0e0e6;
-}
+    gap: 15px;
 
-.organization > span {
-    min-width: 25px;
+    margin-bottom: 30px;
 
-    color: #c26788;
-
-    font-size: 19px;
-}
-
-.organization h3 {
-    color: #5a414a;
-
-    font-size: 14px;
-
-    margin-bottom: 3px;
-}
-
-.organization p {
-    font-size: 11px;
-
-    margin: 0;
+    color: #cf5b8c;
 }
 
 
-/* =========================================
-   INTEREST BOXES
-========================================= */
-
-.interest-boxes {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 8px;
-
-    margin-top: 20px;
-}
-
-.interest-boxes div {
-    padding: 15px 8px;
+.section-title h2 {
+    font-size: 2rem;
 
     text-align: center;
-
-    background: #fff1f5;
-
-    border: 1px solid #edcfda;
 }
 
-.interest-boxes span {
-    color: #c26788;
 
-    font-size: 20px;
-}
+.section-title span {
+    color: #e996b6;
 
-.interest-boxes h3 {
-    margin-top: 5px;
-
-    font-size: 12px;
-
-    color: #5a414a;
+    font-size: 1.4rem;
 }
 
 
 /* =========================================
-   CONTACT
+   CARDS
 ========================================= */
 
-.contact {
-    background: #fff8fa;
-}
+.card {
+    background: white;
 
-button {
-    border: none;
-
-    background: #bd6687;
-
-    color: white;
-
-    padding: 9px 18px;
+    border: 2px solid #f7d0df;
 
     border-radius: 20px;
 
-    cursor: pointer;
+    padding: 30px;
 
-    font-size: 12px;
-}
+    box-shadow:
+        0 8px 25px rgba(190, 87, 127, 0.08);
 
-button:hover {
-    background: #a94e70;
-}
-
-#helloMessage {
-    color: #b05273;
-
-    font-weight: bold;
-
-    margin-top: 12px;
+    margin-bottom: 25px;
 }
 
 
-/* =========================================
-   RIGHT COLUMN
-========================================= */
-
-.right-column {
-    border-left: 1px solid #333;
-
-    padding: 45px 15px;
-
-    background: #fffafb;
+.card p {
+    margin-bottom: 15px;
 }
 
-.sticky-content {
-    position: sticky;
 
-    top: 20px;
-}
-
-.right-column h3 {
-    font-family: Georgia, serif;
-
-    color: #a64f70;
-
-    font-size: 17px;
-
-    margin-bottom: 22px;
+.card p:last-child {
+    margin-bottom: 0;
 }
 
 
 /* =========================================
-   QUICK INFO
+   PICTURE SECTION
 ========================================= */
 
-.quick-item {
-    margin-bottom: 18px;
-}
-
-.quick-item strong {
-    display: block;
-
-    color: #5a414a;
-
-    font-size: 11px;
-
-    margin-bottom: 2px;
-}
-
-.quick-item span {
-    display: block;
-
-    color: #806b73;
-
-    font-size: 10px;
-
-    line-height: 1.4;
-}
-
-
-/* =========================================
-   SOCIAL ICONS
-========================================= */
-
-.social-icons {
+.picture-card {
     display: flex;
 
-    gap: 8px;
-
-    margin-top: 30px;
-}
-
-.social-icons a {
-    width: 28px;
-    height: 28px;
-
-    display: flex;
     align-items: center;
-    justify-content: center;
+
+    gap: 40px;
+
+    background: #fff;
+
+    border: 2px solid #f6cadb;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 8px 25px rgba(190, 87, 127, 0.08);
+}
+
+
+.profile-picture {
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: cover;
 
     border-radius: 50%;
 
-    background: #f4d4df;
+    border: 7px solid #f5b8cf;
 
-    color: #a94e70;
+    padding: 5px;
 
-    text-decoration: none;
+    background: #fff;
 
-    font-size: 10px;
+    box-shadow:
+        0 8px 20px rgba(190, 87, 127, 0.15);
+}
+
+
+.picture-card h3 {
+    color: #cf5b8c;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   SCHOOL TITLE
+========================================= */
+
+.title-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #fff0f6
+        );
+
+    border-radius: 25px;
+
+    border: 2px solid #f6cadb;
+}
+
+
+.title-icon {
+    width: 90px;
+
+    height: 90px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #ffd5e5;
+
+    border-radius: 50%;
+
+    font-size: 2.5rem;
+}
+
+
+.title-card h3 {
+    color: #cf5b8c;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   SCHOOL LIFE
+========================================= */
+
+.school-life-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.life-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    border: 2px solid #f6cadb;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.life-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 25px rgba(190, 87, 127, 0.13);
+}
+
+
+.card-icon {
+    font-size: 2.5rem;
+
+    margin-bottom: 10px;
+}
+
+
+.life-card h3 {
+    color: #cf5b8c;
+
+    margin-bottom: 10px;
+}
+
+
+.school-story h3 {
+    color: #cf5b8c;
+
+    margin-bottom: 15px;
+
+    font-size: 1.5rem;
 }
 
 
 /* =========================================
    FOOTER
-
-   Full width across all three columns.
 ========================================= */
 
 footer {
-    height: 54px;
+    text-align: center;
 
-    display: flex;
+    padding: 30px;
 
-    align-items: center;
+    color: #8b6473;
 
-    justify-content: space-between;
+    background: #ffeaf2;
 
-    padding: 0 25px;
+    border-top: 2px solid #f6cadb;
 
-    border-top: 1px solid #333;
-
-    background: #f8dce7;
-
-    color: #614850;
-
-    font-size: 10px;
+    font-size: 0.9rem;
 }
 
-footer div {
-    display: flex;
 
-    gap: 15px;
-}
-
-footer a {
-    color: #614850;
-
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #a94e70;
+footer p {
+    margin: 4px 0;
 }
 
 
 /* =========================================
-   RESPONSIVE VERSION
+   MOBILE RESPONSIVE DESIGN
 ========================================= */
 
-@media (max-width: 720px) {
+@media (max-width: 850px) {
 
     .website {
+        width: 90%;
+    }
+
+
+    .nav-inner {
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 12px;
+    }
+
+
+    .nav-links {
         width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
     }
 
-    .header {
-        grid-template-columns: 120px 1fr;
+
+    .nav-links a {
+        font-size: 0.85rem;
+
+        padding: 7px 10px;
     }
 
-    .logo {
-        font-size: 25px;
+
+    .hero {
+        padding: 50px 8%;
+
+        text-align: center;
+
+        justify-content: center;
     }
 
-    .body-layout {
-        grid-template-columns: 120px 1fr;
-    }
 
-    .right-column {
+    .hero-decoration {
         display: none;
     }
 
-    .main-content {
-        min-width: 0;
+
+    .picture-card {
+        flex-direction: column;
+
+        text-align: center;
     }
 
-    .primary-nav a {
-        padding: 4px 6px;
-        font-size: 10px;
+
+    .school-life-grid {
+        grid-template-columns: 1fr;
     }
 
-    .secondary-nav a {
-        padding: 4px 7px;
-        font-size: 10px;
+
+    .title-card {
+        flex-direction: column;
+
+        text-align: center;
     }
 }
 
 
 @media (max-width: 500px) {
 
-    .header {
-        display: block;
-        height: auto;
+    .website {
+        width: 94%;
     }
 
-    .logo {
-        height: 65px;
 
-        border-right: none;
-        border-bottom: 1px solid #333;
+    .content-section {
+        padding: 50px 6%;
     }
 
-    .header-right {
-        display: block;
+
+    .nav-links {
+        gap: 2px;
     }
 
-    .graphic-area {
-        height: 65px;
+
+    .nav-links a {
+        font-size: 0.75rem;
+
+        padding: 6px 8px;
     }
 
-    .primary-nav {
-        min-height: 35px;
-        flex-wrap: wrap;
+
+    .profile-picture {
+        width: 170px;
+
+        height: 170px;
     }
 
-    .secondary-nav {
-        min-height: 30px;
-    }
 
-    .body-layout {
-        display: block;
-    }
-
-    .left-column {
-        display: none;
-    }
-
-    footer {
-        height: auto;
-
-        flex-direction: column;
-
-        gap: 10px;
-
-        padding: 15px;
+    .section-title h2 {
+        font-size: 1.6rem;
     }
 }
