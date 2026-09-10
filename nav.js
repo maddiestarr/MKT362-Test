@@ -1,117 +1,83 @@
-// ========================================
-// NAVIGATION JAVASCRIPT
-// ========================================
+/* =========================================
+   SHARED WEBSITE NAVIGATION
+   =========================================
+
+   This navigation can be used on EVERY page.
+
+   Add this before the closing </body> tag:
+
+   <script src="nav.js"></script>
+
+   Then add:
+
+   <div id="site-navigation"></div>
+
+   The JavaScript will automatically create
+   the navigation inside that div.
+========================================= */
 
 
-// ----------------------------------------
-// SMOOTH SCROLLING
-// ----------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
 
-const navLinks = document.querySelectorAll('a[href^="#"]');
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function (event) {
-
-        const targetID = this.getAttribute("href");
-
-        // Ignore empty "#" links
-        if (targetID === "#") {
-            return;
-        }
-
-        const targetSection = document.querySelector(targetID);
-
-        if (targetSection) {
-
-            event.preventDefault();
-
-            targetSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-
-    });
-
-});
+    const navigationContainer =
+        document.getElementById("site-navigation");
 
 
-// ----------------------------------------
-// ACTIVE PRIMARY NAVIGATION
-// ----------------------------------------
+    // Make sure the navigation container exists
+    if (!navigationContainer) {
+        console.error(
+            "Navigation error: #site-navigation was not found."
+        );
 
-const sections = document.querySelectorAll(
-    "main section[id]"
-);
-
-const primaryNavLinks = document.querySelectorAll(
-    ".primary-nav a"
-);
+        return;
+    }
 
 
-function updateNavigation() {
+    // Navigation HTML
+    navigationContainer.innerHTML = `
 
-    let currentSection = "";
+        <nav class="site-nav" aria-label="Main navigation">
 
-    sections.forEach(function (section) {
+            <div class="nav-inner">
 
-        const sectionTop =
-            section.getBoundingClientRect().top;
-
-        // Detect which section is currently
-        // closest to the top of the screen
-        if (sectionTop <= 180) {
-            currentSection = section.getAttribute("id");
-        }
-
-    });
+                <!-- Website Logo -->
+                <a href="index.html" class="nav-logo">
+                    ♡ My World
+                </a>
 
 
-    primaryNavLinks.forEach(function (link) {
+                <!-- Navigation Links -->
+                <ul class="nav-links">
 
-        link.classList.remove("active");
+                    <li>
+                        <a href="index.html#about">
+                            About Me
+                        </a>
+                    </li>
 
-        const linkSection =
-            link.getAttribute("href").replace("#", "");
+                    <li>
+                        <a href="index.html#picture">
+                            My Picture
+                        </a>
+                    </li>
 
-        if (linkSection === currentSection) {
-            link.classList.add("active");
-        }
+                    <li>
+                        <a href="index.html#school">
+                            My Title in School
+                        </a>
+                    </li>
 
-    });
+                    <li>
+                        <a href="index.html#life">
+                            My School Life
+                        </a>
+                    </li>
 
-}
+                </ul>
 
+            </div>
 
-// Run navigation update when scrolling
-window.addEventListener(
-    "scroll",
-    updateNavigation
-);
+        </nav>
 
-
-// Run once when page loads
-updateNavigation();
-
-
-// ----------------------------------------
-// MOBILE NAVIGATION
-// ----------------------------------------
-
-const mobileLinks = document.querySelectorAll(
-    ".primary-nav a, .secondary-nav a"
-);
-
-mobileLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        // Close mobile navigation if you
-        // add a mobile menu later.
-        document.body.classList.remove("nav-open");
-
-    });
-
+    `;
 });
