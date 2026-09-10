@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <li>
 
-                        <a href="index.html#about">
-                            About Me
+                        <a href="index.html#product">
+                            Product
                         </a>
 
                     </li>
