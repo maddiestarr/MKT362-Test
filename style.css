@@ -1,11 +1,11 @@
-/* =========================
-   GENERAL STYLES
-========================= */
+/* =========================================
+   RESET
+========================================= */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -13,569 +13,654 @@ html {
 }
 
 body {
-    font-family: "DM Sans", sans-serif;
-    background-color: #fff7fa;
-    color: #3f3036;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d3035;
+    background: #fceff4;
 }
 
-.page {
-    width: 90%;
-    max-width: 1250px;
+
+/* =========================================
+   OUTER BACKGROUND
+
+   This creates the large background area
+   surrounding the website like your image.
+========================================= */
+
+.background {
+    min-height: 100vh;
+    padding: 0;
+    background: #fceff4;
+}
+
+
+/* =========================================
+   MAIN WEBSITE
+
+   The reference image is a fixed-width
+   centered layout.
+========================================= */
+
+.website {
+    width: 690px;
     margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 35px rgba(190, 115, 140, 0.08);
+    background: #ffffff;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
 }
 
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 .header {
-    min-height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    border-bottom: 1px solid #ead7de;
-    background-color: #fff;
+    height: 116px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #333;
 }
+
+
+/* =========================================
+   LOGO
+========================================= */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #a94f73;
-}
+    justify-content: center;
 
-.logo-heart {
+    font-family: Georgia, serif;
     font-size: 34px;
-    color: #d783a1;
+    color: #b85c7d;
+
+    border-right: 1px solid #333;
+
+    background: #fff7fa;
 }
 
 
-/* =========================
-   HORIZONTAL NAVIGATION
-========================= */
+/* =========================================
+   HEADER RIGHT SIDE
+========================================= */
 
-.navbar {
+.header-right {
+    display: grid;
+    grid-template-rows: 64px 26px 26px;
+}
+
+
+/* =========================================
+   INFORMATION GRAPHIC
+========================================= */
+
+.graphic-area {
+    padding: 12px 20px;
     display: flex;
     align-items: center;
-    gap: 8px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #333;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: #59434c;
+.graphic-area p {
     font-size: 14px;
-    font-weight: 600;
-    padding: 10px 17px;
-    border-radius: 25px;
-    transition: all 0.25s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    background-color: #f8dce7;
-    color: #a94f73;
+    line-height: 1.3;
 }
 
 
-/* =========================
-   PAGE LAYOUT
-========================= */
+/* =========================================
+   PRIMARY NAVIGATION
+   HORIZONTAL
+========================================= */
 
-.content-wrapper {
-    display: grid;
-    grid-template-columns: 190px 1fr 180px;
-    min-height: 700px;
-}
-
-
-/* =========================
-   LEFT SIDEBAR
-========================= */
-
-.left-sidebar {
-    padding: 45px 25px;
-    background-color: #fff9fb;
-    border-right: 1px solid #ead7de;
-}
-
-.left-sidebar h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    color: #a94f73;
-    margin-bottom: 20px;
-}
-
-.left-sidebar ul {
-    list-style: none;
-}
-
-.left-sidebar li {
-    margin-bottom: 15px;
-}
-
-.left-sidebar a {
-    text-decoration: none;
-    color: #725963;
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.left-sidebar a:hover {
-    color: #c36489;
-}
-
-.sidebar-decoration {
+.primary-nav {
     display: flex;
-    gap: 10px;
-    color: #d783a1;
-    margin-top: 50px;
-    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+
+    background: #f9dce7;
+
+    border-bottom: 1px solid #333;
+}
+
+.primary-nav a {
+    text-decoration: none;
+    color: #4c343d;
+
+    font-size: 13px;
+
+    padding: 4px 12px;
+}
+
+.primary-nav a:hover {
+    color: #b34f74;
 }
 
 
-/* =========================
-   MAIN CONTENT
-========================= */
+/* =========================================
+   SECONDARY NAVIGATION
+========================================= */
 
-.main-content {
-    padding: 0 45px;
+.secondary-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff5f8;
 }
 
-.section {
-    padding: 80px 0;
-    border-bottom: 1px solid #f0e2e7;
-    scroll-margin-top: 30px;
+.secondary-nav a {
+    text-decoration: none;
+    color: #6c515b;
+
+    font-size: 12px;
+
+    padding: 4px 15px;
 }
 
-.section:last-child {
-    border-bottom: none;
+.secondary-nav a:hover {
+    color: #b34f74;
 }
 
-.section-label {
-    color: #c36489;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
+
+/* =========================================
+   THREE COLUMN BODY
+
+   This directly recreates the major
+   structure in your reference image.
+========================================= */
+
+.body-layout {
+    display: grid;
+
+    grid-template-columns: 160px 370px 158px;
+
+    min-height: 650px;
 }
 
-h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 36px;
-    line-height: 1.2;
-    color: #513a43;
+
+/* =========================================
+   LEFT COLUMN
+========================================= */
+
+.left-column {
+    border-right: 1px solid #333;
+
+    padding: 45px 20px;
+
+    background: #fffafb;
+}
+
+.left-column h3 {
+    font-family: Georgia, serif;
+    color: #a64f70;
+
+    font-size: 18px;
+
     margin-bottom: 25px;
 }
 
-.section p {
-    max-width: 700px;
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.side-nav a {
+    text-decoration: none;
+
+    color: #58434b;
+
+    font-size: 14px;
+}
+
+.side-nav a:hover {
+    color: #b44f74;
+}
+
+.side-decoration {
+    margin-top: 80px;
+
+    text-align: center;
+
+    color: #d37b9b;
+
+    font-size: 25px;
+
+    line-height: 2;
 }
 
 
-/* =========================
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    background: #ffffff;
+}
+
+
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero {
-    min-height: 390px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 65px 0;
-    border-bottom: 1px solid #f0e2e7;
-    scroll-margin-top: 30px;
+    padding: 20px 16px 35px;
+
+    border-bottom: 1px solid #333;
 }
 
-.small-heading {
-    color: #c36489;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+.hero-image {
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8d9e4;
+
+    border: 1px solid #d9a8ba;
+
+    margin-bottom: 20px;
+}
+
+.flower {
+    font-size: 55px;
+    color: #bd6687;
 }
 
 .hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(50px, 7vw, 78px);
-    line-height: 0.95;
-    color: #a94f73;
-    margin-bottom: 25px;
+    font-family: Georgia, serif;
+
+    font-size: 29px;
+
+    color: #a94e70;
+
+    margin-bottom: 10px;
 }
 
-.hero-description {
-    max-width: 470px;
-    color: #705963;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-.hero-flower {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background-color: #fbe4ec;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #c36489;
-    font-size: 90px;
-    transform: rotate(-10deg);
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.button {
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #b75f82;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-family: "DM Sans", sans-serif;
+.intro {
     font-size: 14px;
-    font-weight: 600;
-    transition: all 0.25s ease;
-}
 
-.button:hover {
-    background-color: #984968;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(183, 95, 130, 0.2);
+    line-height: 1.6;
+
+    color: #66535a;
 }
 
 
-/* =========================
-   ABOUT ME CARDS
-========================= */
+/* =========================================
+   CONTENT SECTIONS
+========================================= */
 
-.info-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 35px;
+.content-section {
+    padding: 28px 16px;
+
+    border-bottom: 1px solid #eee0e5;
 }
 
-.info-card {
-    padding: 22px;
-    background-color: #fff6f9;
-    border: 1px solid #f0dce4;
-    border-radius: 12px;
+.content-section h2 {
+    font-family: Georgia, serif;
+
+    color: #a94e70;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
 }
 
-.card-icon {
-    font-size: 23px;
-    color: #c36489;
-}
-
-.info-card h3 {
-    margin-top: 8px;
-    font-size: 16px;
-    color: #5b414b;
-}
-
-.info-card p {
+.content-section p {
     font-size: 13px;
-    color: #806a72;
+
+    line-height: 1.65;
+
+    color: #59464e;
+
+    margin-bottom: 12px;
 }
 
 
-/* =========================
-   ON CAMPUS
-========================= */
+/* =========================================
+   ORGANIZATIONS
+========================================= */
 
-.campus-section {
-    background-color: #fff;
+.organization-list {
+    margin-top: 22px;
 }
 
-.club-list {
-    margin-top: 35px;
-}
-
-.club {
+.organization {
     display: flex;
-    gap: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid #f1e3e8;
+
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #f0e0e6;
 }
 
-.club:last-child {
-    border-bottom: none;
+.organization > span {
+    min-width: 25px;
+
+    color: #c26788;
+
+    font-size: 19px;
 }
 
-.club-number {
-    min-width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #f8dce7;
-    color: #a94f73;
-    font-size: 12px;
-    font-weight: 700;
-}
+.organization h3 {
+    color: #5a414a;
 
-.club h3 {
-    color: #5a414b;
-    font-size: 17px;
+    font-size: 14px;
+
     margin-bottom: 3px;
 }
 
-.club p {
-    color: #806a72;
-    font-size: 14px;
+.organization p {
+    font-size: 11px;
+
+    margin: 0;
 }
 
 
-/* =========================
-   PASSIONS
-========================= */
+/* =========================================
+   INTEREST BOXES
+========================================= */
 
-.passion-grid {
+.interest-boxes {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 35px;
-}
 
-.passion-card {
-    padding: 25px;
-    background-color: #fff6f9;
-    border-radius: 12px;
-    border: 1px solid #f0dce4;
-}
-
-.passion-card span {
-    color: #c36489;
-    font-size: 25px;
-}
-
-.passion-card h3 {
-    color: #5a414b;
-    margin: 8px 0;
-    font-size: 17px;
-}
-
-.passion-card p {
-    color: #806a72;
-    font-size: 14px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-section {
-    background-color: #fff9fb;
-    padding: 65px 30px;
-    border-radius: 15px;
-    margin: 50px 0;
-    border: 1px solid #f0dce4;
-}
-
-.contact-message {
-    margin-top: 20px;
-    color: #a94f73;
-    font-weight: 600;
-}
-
-
-/* =========================
-   RIGHT SIDEBAR
-========================= */
-
-.right-sidebar {
-    padding: 35px 20px;
-    border-left: 1px solid #ead7de;
-    background-color: #fff9fb;
-}
-
-.sticky-box {
-    position: sticky;
-    top: 25px;
-}
-
-.sidebar-title {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #c36489;
-    margin-bottom: 25px;
-}
-
-.quick-fact {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.quick-fact > span {
-    color: #c36489;
-    font-size: 18px;
-}
-
-.quick-fact strong {
-    display: block;
-    color: #5b414b;
-    font-size: 13px;
-}
-
-.quick-fact p {
-    color: #806a72;
-    font-size: 11px;
-    line-height: 1.4;
-}
-
-.social-links {
-    display: flex;
     gap: 8px;
-    margin-top: 30px;
+
+    margin-top: 20px;
 }
 
-.social-links a {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5d5e1;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #a94f73;
-    font-size: 11px;
-    font-weight: 700;
+.interest-boxes div {
+    padding: 15px 8px;
+
+    text-align: center;
+
+    background: #fff1f5;
+
+    border: 1px solid #edcfda;
+}
+
+.interest-boxes span {
+    color: #c26788;
+
+    font-size: 20px;
+}
+
+.interest-boxes h3 {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #5a414a;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* =========================================
+   CONTACT
+========================================= */
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 40px;
-    background-color: #f9e7ed;
-    color: #745964;
+.contact {
+    background: #fff8fa;
+}
+
+button {
+    border: none;
+
+    background: #bd6687;
+
+    color: white;
+
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
     font-size: 12px;
 }
 
-.footer-links {
-    display: flex;
-    gap: 20px;
+button:hover {
+    background: #a94e70;
 }
 
-.footer-links a {
-    color: #745964;
+#helloMessage {
+    color: #b05273;
+
+    font-weight: bold;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   RIGHT COLUMN
+========================================= */
+
+.right-column {
+    border-left: 1px solid #333;
+
+    padding: 45px 15px;
+
+    background: #fffafb;
+}
+
+.sticky-content {
+    position: sticky;
+
+    top: 20px;
+}
+
+.right-column h3 {
+    font-family: Georgia, serif;
+
+    color: #a64f70;
+
+    font-size: 17px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   QUICK INFO
+========================================= */
+
+.quick-item {
+    margin-bottom: 18px;
+}
+
+.quick-item strong {
+    display: block;
+
+    color: #5a414a;
+
+    font-size: 11px;
+
+    margin-bottom: 2px;
+}
+
+.quick-item span {
+    display: block;
+
+    color: #806b73;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 30px;
+}
+
+.social-icons a {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f4d4df;
+
+    color: #a94e70;
+
+    text-decoration: none;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   FOOTER
+
+   Full width across all three columns.
+========================================= */
+
+footer {
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    border-top: 1px solid #333;
+
+    background: #f8dce7;
+
+    color: #614850;
+
+    font-size: 10px;
+}
+
+footer div {
+    display: flex;
+
+    gap: 15px;
+}
+
+footer a {
+    color: #614850;
+
     text-decoration: none;
 }
 
-.footer-links a:hover {
-    color: #a94f73;
+footer a:hover {
+    color: #a94e70;
 }
 
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* =========================================
+   RESPONSIVE VERSION
+========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 720px) {
 
-    .content-wrapper {
-        grid-template-columns: 160px 1fr;
-    }
-
-    .right-sidebar {
-        display: none;
-    }
-
-    .navbar {
-        gap: 0;
-    }
-
-    .nav-link {
-        padding: 8px 10px;
-    }
-
-    .main-content {
-        padding: 0 30px;
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .page {
+    .website {
         width: 100%;
     }
 
     .header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 25px 15px;
+        grid-template-columns: 120px 1fr;
     }
 
-    .navbar {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
+    .logo {
+        font-size: 25px;
     }
 
-    .nav-link {
-        font-size: 12px;
-        padding: 7px 9px;
+    .body-layout {
+        grid-template-columns: 120px 1fr;
     }
 
-    .content-wrapper {
-        display: block;
-    }
-
-    .left-sidebar {
+    .right-column {
         display: none;
     }
 
     .main-content {
-        padding: 0 22px;
+        min-width: 0;
     }
 
-    .hero {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 35px;
+    .primary-nav a {
+        padding: 4px 6px;
+        font-size: 10px;
     }
 
-    .hero-flower {
-        align-self: center;
-        width: 140px;
-        height: 140px;
-        font-size: 70px;
+    .secondary-nav a {
+        padding: 4px 7px;
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .header {
+        display: block;
+        height: auto;
     }
 
-    .info-cards,
-    .passion-grid {
-        grid-template-columns: 1fr;
+    .logo {
+        height: 65px;
+
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .header-right {
+        display: block;
+    }
+
+    .graphic-area {
+        height: 65px;
+    }
+
+    .primary-nav {
+        min-height: 35px;
+        flex-wrap: wrap;
+    }
+
+    .secondary-nav {
+        min-height: 30px;
+    }
+
+    .body-layout {
+        display: block;
+    }
+
+    .left-column {
+        display: none;
     }
 
     footer {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
+        height: auto;
 
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 15px;
+    }
 }
