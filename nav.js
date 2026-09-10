@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <li>
 
-                        <a href="index.html#product">
+                        <a href="product.html">
                             Product
                         </a>
 
