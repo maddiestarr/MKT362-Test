@@ -1,181 +1,117 @@
-// nav.js
-// Reusable navigation bar for Madeline Starr's website
+// ========================================
+// NAVIGATION JAVASCRIPT
+// ========================================
 
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.createElement("nav");
-    nav.className = "main-nav";
 
-    nav.innerHTML = `
-        <div class="nav-container">
+// ----------------------------------------
+// SMOOTH SCROLLING
+// ----------------------------------------
 
-            <!-- Profile Picture -->
-            <a href="index.html" class="nav-profile">
-                <img src="images/madeline.jpg" alt="Madeline Starr">
-            </a>
+const navLinks = document.querySelectorAll('a[href^="#"]');
 
-            <!-- School Title -->
-            <a href="index.html" class="nav-item home-link">
-                <span class="nav-icon">🎓</span>
-                <span>
-                    <strong>Madeline Starr</strong>
-                    <small>Iowa State University</small>
-                </span>
-            </a>
+navLinks.forEach(function (link) {
 
-            <!-- Life at School -->
-            <a href="school-life.html" class="nav-item">
-                <span class="nav-icon">💛</span>
-                <span>Life at School</span>
-            </a>
+    link.addEventListener("click", function (event) {
 
-            <!-- Work Experience -->
-            <a href="work-experience.html" class="nav-item">
-                <span class="nav-icon">💼</span>
-                <span>Work Experience</span>
-            </a>
+        const targetID = this.getAttribute("href");
 
-        </div>
-    `;
-
-    // Add navigation to the top of the page
-    document.body.prepend(nav);
-
-    // Add styles to the page
-    const style = document.createElement("style");
-
-    style.textContent = `
-        * {
-            box-sizing: border-box;
+        // Ignore empty "#" links
+        if (targetID === "#") {
+            return;
         }
 
-        .main-nav {
-            width: 100%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255, 250, 247, 0.96);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #f1dcd5;
-            box-shadow: 0 3px 15px rgba(100, 70, 60, 0.08);
+        const targetSection = document.querySelector(targetID);
+
+        if (targetSection) {
+
+            event.preventDefault();
+
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
         }
 
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 10px 25px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+    });
+
+});
+
+
+// ----------------------------------------
+// ACTIVE PRIMARY NAVIGATION
+// ----------------------------------------
+
+const sections = document.querySelectorAll(
+    "main section[id]"
+);
+
+const primaryNavLinks = document.querySelectorAll(
+    ".primary-nav a"
+);
+
+
+function updateNavigation() {
+
+    let currentSection = "";
+
+    sections.forEach(function (section) {
+
+        const sectionTop =
+            section.getBoundingClientRect().top;
+
+        // Detect which section is currently
+        // closest to the top of the screen
+        if (sectionTop <= 180) {
+            currentSection = section.getAttribute("id");
         }
 
-        /* Profile photo */
-        .nav-profile {
-            flex-shrink: 0;
-        }
+    });
 
-        .nav-profile img {
-            width: 52px;
-            height: 52px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #e8b7a8;
-            padding: 2px;
-            background: white;
-            transition: transform 0.3s ease;
-        }
 
-        .nav-profile img:hover {
-            transform: rotate(-5deg) scale(1.08);
-        }
+    primaryNavLinks.forEach(function (link) {
 
-        /* Navigation links */
-        .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            padding: 10px 16px;
-            border-radius: 18px;
-            color: #604c48;
-            text-decoration: none;
-            font-family: "Arial", sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.25s ease;
-            white-space: nowrap;
-        }
+        link.classList.remove("active");
 
-        .nav-item:hover {
-            background: #f9e5df;
-            color: #9a6255;
-            transform: translateY(-2px);
-        }
+        const linkSection =
+            link.getAttribute("href").replace("#", "");
 
-        .nav-item.active {
-            background: #f3d4cb;
-            color: #8b5549;
-        }
-
-        .nav-icon {
-            font-size: 18px;
-        }
-
-        /* Name/school section */
-        .home-link {
-            margin-right: auto;
-        }
-
-        .home-link strong {
-            display: block;
-            font-size: 15px;
-            color: #72534c;
-        }
-
-        .home-link small {
-            display: block;
-            margin-top: 2px;
-            font-size: 11px;
-            font-weight: 400;
-            color: #9d817a;
-        }
-
-        /* Mobile */
-        @media (max-width: 700px) {
-            .nav-container {
-                padding: 8px 12px;
-                gap: 5px;
-            }
-
-            .nav-profile img {
-                width: 42px;
-                height: 42px;
-            }
-
-            .nav-item {
-                padding: 8px 9px;
-                font-size: 12px;
-            }
-
-            .nav-icon {
-                font-size: 15px;
-            }
-
-            .home-link span:last-child {
-                display: none;
-            }
-        }
-    `;
-
-    document.head.appendChild(style);
-
-    // Automatically highlight the current page
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-    const navLinks = document.querySelectorAll(".nav-item");
-
-    navLinks.forEach(link => {
-        const linkPage = link.getAttribute("href");
-
-        if (linkPage === currentPage) {
+        if (linkSection === currentSection) {
             link.classList.add("active");
         }
+
     });
+
+}
+
+
+// Run navigation update when scrolling
+window.addEventListener(
+    "scroll",
+    updateNavigation
+);
+
+
+// Run once when page loads
+updateNavigation();
+
+
+// ----------------------------------------
+// MOBILE NAVIGATION
+// ----------------------------------------
+
+const mobileLinks = document.querySelectorAll(
+    ".primary-nav a, .secondary-nav a"
+);
+
+mobileLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        // Close mobile navigation if you
+        // add a mobile menu later.
+        document.body.classList.remove("nav-open");
+
+    });
+
 });
