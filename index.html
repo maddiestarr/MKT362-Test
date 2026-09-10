@@ -1,533 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- =====================================================
-         BASIC DOCUMENT INFORMATION
-         ===================================================== -->
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madeline Starr | Marketing Student</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <meta
-        name="description"
-        content="Welcome to our website."
-    >
-
-    <meta
-        name="author"
-        content="Your Name"
-    >
-
-    <title>Home | My Website</title>
-
-
-    <!-- =====================================================
-         STYLESHEET
-         ===================================================== -->
-
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 
 <body>
 
-    <!-- =====================================================
-         WEBSITE WRAPPER
-         
-         This is 80% of the screen width.
-         The body background creates the 10% pink areas
-         on the left and right.
-         ===================================================== -->
+    <!-- Page Wrapper -->
+    <div class="page">
 
-    <div class="site-wrapper">
+        <!-- Header -->
+        <header class="header">
 
-
-        <!-- =================================================
-             HEADER
-             ================================================= -->
-
-        <header class="site-header">
-
-
-            <!-- =============================================
-                 LOGO AREA
-                 ============================================= -->
-
-            <div class="logo-area">
-
-                <a
-                    href="index.html"
-                    aria-label="Go to homepage"
-                >
-                    Logo
-                </a>
-
+            <div class="logo">
+                <span class="logo-heart">♡</span>
+                <span>Madeline</span>
             </div>
 
-
-            <!-- =============================================
-                 HEADER INFORMATION + NAVIGATION
-                 ============================================= -->
-
-            <div class="header-right">
-
-
-                <!-- =========================================
-                     WEBSITE DESCRIPTION
-                     ========================================= -->
-
-                <div class="header-info">
-
-                    <p>
-                        This area is for informational graphics
-                        which describe what your site is about.
-                    </p>
-
-                </div>
-
-
-                <!-- =========================================
-                     NAVIGATION
-
-                     navigation.js will automatically insert:
-
-                     Primary navigation
-                     Secondary navigation
-                     ========================================= -->
-
-                <div id="site-navigation"></div>
-
-
-            </div>
+            <!-- Horizontal Navigation -->
+            <nav class="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#campus" class="nav-link">On Campus</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
 
         </header>
 
 
+        <!-- Main Website Content -->
+        <div class="content-wrapper">
 
-        <!-- =================================================
-             MAIN WEBSITE AREA
-             ================================================= -->
+            <!-- Left Navigation / Sidebar -->
+            <aside class="left-sidebar">
 
-        <main class="main-layout">
-
-
-            <!-- =============================================
-                 MAIN CONTENT
-                 ============================================= -->
-
-            <section class="content-area">
-
-
-                <!-- =========================================
-                     HERO IMAGE
-                     ========================================= -->
-
-                <div class="hero-image">
-
-                    <!--
-
-                    Replace this image with your own.
-
-                    Put your image in:
-
-                    images/hero.jpg
-
-                    -->
-
-                    <img
-                        src="images/hero.jpg"
-                        alt="Welcome to our website"
-                    >
-
-                </div>
-
-
-
-                <!-- =========================================
-                     MAIN PAGE HEADING
-                     ========================================= -->
-
-                <h1>
-                    Welcome to Our Website
-                </h1>
-
-
-
-                <!-- =========================================
-                     INTRODUCTION
-                     ========================================= -->
-
-                <p>
-                    Welcome to our website. This is the main
-                    content area where you can introduce your
-                    organization, business, project, community,
-                    or personal website to visitors.
-                </p>
-
-
-                <p>
-                    The purpose of this website is to provide
-                    useful information in a clear and accessible
-                    format. Visitors can use the navigation menu
-                    at the top of the page to explore different
-                    sections of the website.
-                </p>
-
-
-
-                <!-- =========================================
-                     SECOND SECTION
-                     ========================================= -->
-
-                <h2>
-                    About This Website
-                </h2>
-
-
-                <p>
-                    This website uses a simple responsive layout
-                    designed to work on desktop computers,
-                    tablets, and mobile devices. The main content
-                    area provides space for articles, images,
-                    announcements, projects, and other HTML
-                    content.
-                </p>
-
-
-                <p>
-                    The navigation system is powered by a
-                    separate JavaScript file. This means the
-                    same navigation can be displayed across
-                    every page of the website without having to
-                    manually recreate the navigation on each
-                    page.
-                </p>
-
-
-
-                <!-- =========================================
-                     IMAGE
-                     ========================================= -->
-
-                <img
-                    src="images/about.jpg"
-                    alt="About our website"
-                >
-
-
-
-                <!-- =========================================
-                     THIRD SECTION
-                     ========================================= -->
-
-                <h2>
-                    What We Offer
-                </h2>
-
-
-                <p>
-                    Our website provides information, resources,
-                    news, and other useful material for visitors.
-                    You can customize this section with the
-                    content that is most relevant to your
-                    website.
-                </p>
-
-
-                <p>
-                    Additional pages can be added at any time.
-                    For example, you might create pages for
-                    About, Services, Projects, Blog, Resources,
-                    Frequently Asked Questions, and Contact.
-                </p>
-
-
-
-                <!-- =========================================
-                     FEATURE LIST
-                     ========================================= -->
+                <h3>Explore</h3>
 
                 <ul>
-
-                    <li>
-                        Useful information and resources
-                    </li>
-
-                    <li>
-                        News and announcements
-                    </li>
-
-                    <li>
-                        Projects and updates
-                    </li>
-
-                    <li>
-                        Helpful articles and guides
-                    </li>
-
-                    <li>
-                        Contact and support information
-                    </li>
-
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#campus">On Campus</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
 
-
-
-                <!-- =========================================
-                     CALL TO ACTION
-                     ========================================= -->
-
-                <h2>
-                    Explore the Website
-                </h2>
-
-
-                <p>
-                    Use the navigation menu above to explore
-                    the website and learn more about what we do.
-                </p>
-
-
-                <p>
-
-                    <a
-                        class="button"
-                        href="about.html"
-                    >
-                        Learn More
-                    </a>
-
-                </p>
-
-
-            </section>
-
-
-
-            <!-- =============================================
-                 RIGHT SIDEBAR
-                 
-                 This section stays visible while scrolling
-                 because of position: sticky in CSS.
-                 ============================================= -->
-
-            <aside
-                class="right-sidebar"
-                aria-label="Additional information"
-            >
-
-                <div class="sticky-content">
-
-
-                    <!-- =====================================
-                         SIDEBAR HEADING
-                         ===================================== -->
-
-                    <h2>
-                        Sticky Content
-                    </h2>
-
-
-                    <!-- =====================================
-                         NEWS
-                         ===================================== -->
-
-                    <h3>
-                        News
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="blog.html">
-                                Latest News
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">
-                                Recent Updates
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">
-                                Announcements
-                            </a>
-                        </li>
-
-                    </ul>
-
-
-
-                    <!-- =====================================
-                         OFFERS
-                         ===================================== -->
-
-                    <h3>
-                        Offers
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#">
-                                Special Offers
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Featured Content
-                            </a>
-                        </li>
-
-                    </ul>
-
-
-
-                    <!-- =====================================
-                         GENERAL INFORMATION
-                         ===================================== -->
-
-                    <h3>
-                        Information
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="about.html">
-                                About Us
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="faq.html">
-                                FAQ
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="resources.html">
-                                Resources
-                            </a>
-                        </li>
-
-                    </ul>
-
-
-
-                    <!-- =====================================
-                         SOCIAL LINKS
-                         ===================================== -->
-
-                    <h3>
-                        Follow Us
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a
-                                href="#"
-                                aria-label="Facebook"
-                            >
-                                Facebook
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#"
-                                aria-label="Instagram"
-                            >
-                                Instagram
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#"
-                                aria-label="YouTube"
-                            >
-                                YouTube
-                            </a>
-                        </li>
-
-                    </ul>
-
-
+                <div class="sidebar-decoration">
+                    <span>♡</span>
+                    <span>✿</span>
+                    <span>♡</span>
                 </div>
 
             </aside>
 
 
-        </main>
+            <!-- Main Content -->
+            <main class="main-content">
+
+                <!-- Hero Section -->
+                <section id="home" class="hero">
+
+                    <div class="hero-text">
+                        <p class="small-heading">HELLO, I'M</p>
+
+                        <h1>Madeline<br>Starr</h1>
+
+                        <p class="hero-description">
+                            Marketing student, aspiring sales professional,
+                            and Iowa State University senior.
+                        </p>
+
+                        <a href="#about" class="button">Get to Know Me</a>
+                    </div>
+
+                    <div class="hero-flower">
+                        ✿
+                    </div>
+
+                </section>
 
 
+                <!-- About Me -->
+                <section id="about" class="section">
 
-        <!-- =================================================
-             FOOTER
-             ================================================= -->
+                    <p class="section-label">01 — ABOUT ME</p>
 
-        <footer class="site-footer">
+                    <h2>A little bit about me ♡</h2>
+
+                    <p>
+                        Hi! My name is <strong>Madeline Starr</strong>, and I am a
+                        senior at Iowa State University. I am majoring in
+                        <strong>Marketing</strong> and am also obtaining my
+                        <strong>Professional Sales Certificate</strong>.
+                    </p>
+
+                    <p>
+                        I am passionate about connecting with people, building
+                        meaningful relationships, and using creativity and
+                        strategy to solve problems. My experiences at Iowa State
+                        have helped me grow both personally and professionally
+                        while preparing me for a career in marketing and sales.
+                    </p>
+
+                    <div class="info-cards">
+
+                        <div class="info-card">
+                            <span class="card-icon">🎓</span>
+                            <h3>Education</h3>
+                            <p>Iowa State University</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="card-icon">♡</span>
+                            <h3>Major</h3>
+                            <p>Marketing</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="card-icon">✦</span>
+                            <h3>Certificate</h3>
+                            <p>Professional Sales</p>
+                        </div>
+
+                    </div>
+
+                </section>
 
 
-            <!-- Copyright -->
+                <!-- On Campus -->
+                <section id="campus" class="section campus-section">
 
-            <span>
-                &copy; 2026 My Website
-            </span>
+                    <p class="section-label">02 — ON CAMPUS</p>
+
+                    <h2>Getting involved ♡</h2>
+
+                    <p>
+                        Outside of the classroom, I enjoy being involved in
+                        organizations across campus. These experiences have
+                        given me opportunities to meet new people, develop my
+                        leadership skills, and grow my professional network.
+                    </p>
+
+                    <div class="club-list">
+
+                        <div class="club">
+                            <div class="club-number">01</div>
+                            <div>
+                                <h3>Delta Zeta</h3>
+                                <p>
+                                    A community that has helped me build
+                                    lifelong friendships and meaningful
+                                    connections.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="club">
+                            <div class="club-number">02</div>
+                            <div>
+                                <h3>Marketing Club</h3>
+                                <p>
+                                    An opportunity to learn more about the
+                                    marketing industry and connect with
+                                    other students.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="club">
+                            <div class="club-number">03</div>
+                            <div>
+                                <h3>Sales Club</h3>
+                                <p>
+                                    Helping me develop communication,
+                                    relationship-building, and professional
+                                    sales skills.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="club">
+                            <div class="club-number">04</div>
+                            <div>
+                                <h3>Real Estate Development Club</h3>
+                                <p>
+                                    Exploring the real estate industry and
+                                    learning about development and business.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
 
 
-            <!-- Footer links -->
+                <!-- Experience -->
+                <section id="experience" class="section">
 
-            <a href="index.html">
-                Home
-            </a>
+                    <p class="section-label">03 — EXPERIENCE</p>
 
-            <a href="about.html">
-                About
-            </a>
+                    <h2>What I'm passionate about</h2>
 
-            <a href="contact.html">
-                Contact
-            </a>
+                    <div class="passion-grid">
 
-            <a href="privacy.html">
-                Privacy
-            </a>
+                        <div class="passion-card">
+                            <span>♡</span>
+                            <h3>Marketing</h3>
+                            <p>
+                                Creating ideas and strategies that connect
+                                brands with their audiences.
+                            </p>
+                        </div>
 
-            <a href="sitemap.html">
-                Sitemap
-            </a>
+                        <div class="passion-card">
+                            <span>✦</span>
+                            <h3>Professional Sales</h3>
+                            <p>
+                                Building relationships and creating value
+                                through effective communication.
+                            </p>
+                        </div>
 
+                        <div class="passion-card">
+                            <span>✿</span>
+                            <h3>Real Estate</h3>
+                            <p>
+                                Learning about business, development, and
+                                opportunities within real estate.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Contact -->
+                <section id="contact" class="section contact-section">
+
+                    <p class="section-label">04 — CONTACT</p>
+
+                    <h2>Let's connect ♡</h2>
+
+                    <p>
+                        Thank you for visiting my website! I would love to
+                        connect and learn more about new opportunities,
+                        organizations, and people in the marketing and sales
+                        world.
+                    </p>
+
+                    <button id="contactButton" class="button">
+                        Say Hello
+                    </button>
+
+                    <p id="contactMessage" class="contact-message"></p>
+
+                </section>
+
+            </main>
+
+
+            <!-- Right Sidebar -->
+            <aside class="right-sidebar">
+
+                <div class="sticky-box">
+
+                    <p class="sidebar-title">QUICK FACTS</p>
+
+                    <div class="quick-fact">
+                        <span>🎓</span>
+                        <div>
+                            <strong>Student</strong>
+                            <p>Senior at Iowa State</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-fact">
+                        <span>♡</span>
+                        <div>
+                            <strong>Major</strong>
+                            <p>Marketing</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-fact">
+                        <span>✦</span>
+                        <div>
+                            <strong>Certificate</strong>
+                            <p>Professional Sales</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-fact">
+                        <span>✿</span>
+                        <div>
+                            <strong>Involved</strong>
+                            <p>4 campus organizations</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+
+            <p>
+                © <span id="year"></span> Madeline Starr
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#campus">On Campus</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <p>Made with ♡</p>
 
         </footer>
 
-
     </div>
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-         
-         This loads the reusable navigation system.
-
-         The navigation.js file automatically creates the
-         horizontal primary and secondary navigation.
-         ===================================================== -->
-
-    <script src="js/navigation.js"></script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
