@@ -1,12 +1,6 @@
-/* =========================================================
-   WEBSITE STYLE
-   GitHub Pages / Static Website
-   ========================================================= */
-
-
-/* =========================================================
-   1. RESET
-   ========================================================= */
+/* =========================
+   GENERAL STYLES
+========================= */
 
 * {
     margin: 0;
@@ -19,682 +13,569 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #111111;
-
-    /*
-     * LIGHT PINK BACKGROUND
-     *
-     * The website itself is 80% wide.
-     * This leaves approximately 10% of the viewport
-     * visible as pink on each side.
-     */
-    background-color: #f8dfe8;
-
-    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    background-color: #fff7fa;
+    color: #3f3036;
+    line-height: 1.6;
 }
 
-
-/* =========================================================
-   2. MAIN WEBSITE CONTAINER
-   ========================================================= */
-
-.site-wrapper {
-    width: 80%;
-    min-height: 100vh;
-
+.page {
+    width: 90%;
+    max-width: 1250px;
     margin: 0 auto;
-
     background-color: #ffffff;
-
-    border-left: 2px solid #222222;
-    border-right: 2px solid #222222;
-
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 0 35px rgba(190, 115, 140, 0.08);
 }
 
 
-/* =========================================================
-   3. HEADER
-   ========================================================= */
+/* =========================
+   HEADER
+========================= */
 
-.site-header {
-    display: grid;
-
-    /*
-     * Left side = logo
-     * Right side = description + navigation
-     */
-    grid-template-columns: 20% 80%;
-
-    background-color: #ffffff;
-
-    border-top: 2px solid #222222;
-    border-bottom: 2px solid #222222;
-}
-
-
-/* =========================================================
-   4. LOGO
-   ========================================================= */
-
-.logo-area {
-    min-height: 115px;
-
+.header {
+    min-height: 110px;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    border-right: 2px solid #222222;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ead7de;
+    background-color: #fff;
 }
 
-.logo-area a {
-    color: #111111;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #a94f73;
+}
 
+.logo-heart {
+    font-size: 34px;
+    color: #d783a1;
+}
+
+
+/* =========================
+   HORIZONTAL NAVIGATION
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link {
     text-decoration: none;
-
-    font-size: clamp(2rem, 4vw, 3rem);
-
-    font-weight: 400;
-}
-
-.logo-area a:hover {
-    color: #555555;
-}
-
-
-/* =========================================================
-   5. HEADER DESCRIPTION
-   ========================================================= */
-
-.header-right {
-    display: flex;
-    flex-direction: column;
-}
-
-.header-info {
-    min-height: 64px;
-
-    padding: 12px 24px;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 16px;
-}
-
-
-/* =========================================================
-   6. NAVIGATION CONTAINER
-   ========================================================= */
-
-#site-navigation {
-    width: 100%;
-}
-
-
-/* =========================================================
-   7. PRIMARY NAVIGATION
-   ========================================================= */
-
-.primary-navigation {
-    width: 100%;
-
-    min-height: 32px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-top: 1px solid #222222;
-    border-bottom: 1px solid #222222;
-}
-
-.primary-navigation ul {
-    width: 100%;
-
-    list-style: none;
-
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: center;
-
-    flex-wrap: wrap;
-}
-
-.primary-navigation li {
-    margin: 0;
-    padding: 0;
-}
-
-.primary-navigation a {
-    display: block;
-
-    padding: 5px 20px;
-
-    color: #111111;
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
-}
-
-.primary-navigation a:hover {
-    background-color: #f8dfe8;
-}
-
-.primary-navigation a.active {
-    background-color: #111111;
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   8. SECONDARY NAVIGATION
-   ========================================================= */
-
-.secondary-navigation {
-    width: 100%;
-
-    min-height: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.secondary-navigation ul {
-    width: 100%;
-
-    list-style: none;
-
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: center;
-
-    flex-wrap: wrap;
-}
-
-.secondary-navigation li {
-    margin: 0;
-    padding: 0;
-}
-
-.secondary-navigation a {
-    display: block;
-
-    padding: 4px 15px;
-
-    color: #111111;
-
-    text-decoration: none;
-
+    color: #59434c;
     font-size: 14px;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+    font-weight: 600;
+    padding: 10px 17px;
+    border-radius: 25px;
+    transition: all 0.25s ease;
 }
 
-.secondary-navigation a:hover {
-    background-color: #f8dfe8;
+.nav-link:hover,
+.nav-link.active {
+    background-color: #f8dce7;
+    color: #a94f73;
 }
 
-.secondary-navigation a.active {
-    font-weight: bold;
-}
 
+/* =========================
+   PAGE LAYOUT
+========================= */
 
-/* =========================================================
-   9. MAIN LAYOUT
-   ========================================================= */
-
-.main-layout {
-    /*
-     * Main content = 75%
-     * Sidebar     = 25%
-     */
+.content-wrapper {
     display: grid;
-
-    grid-template-columns: 75% 25%;
-
-    flex: 1;
-
-    min-height: 500px;
+    grid-template-columns: 190px 1fr 180px;
+    min-height: 700px;
 }
 
 
-/* =========================================================
-   10. MAIN CONTENT
-   ========================================================= */
+/* =========================
+   LEFT SIDEBAR
+========================= */
 
-.content-area {
-    padding: 18px 22px 40px;
-
-    background-color: #ffffff;
-
-    min-width: 0;
+.left-sidebar {
+    padding: 45px 25px;
+    background-color: #fff9fb;
+    border-right: 1px solid #ead7de;
 }
 
-.content-area h1 {
-    margin-bottom: 15px;
-
-    font-size: 28px;
-
-    line-height: 1.2;
+.left-sidebar h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #a94f73;
+    margin-bottom: 20px;
 }
 
-.content-area h2 {
-    margin-top: 25px;
-    margin-bottom: 12px;
-
-    font-size: 22px;
+.left-sidebar ul {
+    list-style: none;
 }
 
-.content-area h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-    font-size: 18px;
-}
-
-.content-area p {
+.left-sidebar li {
     margin-bottom: 15px;
 }
 
-.content-area ul,
-.content-area ol {
-    margin-bottom: 20px;
-
-    padding-left: 25px;
+.left-sidebar a {
+    text-decoration: none;
+    color: #725963;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
-.content-area li {
-    margin-bottom: 6px;
+.left-sidebar a:hover {
+    color: #c36489;
 }
 
-.content-area a {
-    color: #111111;
-}
-
-.content-area a:hover {
-    color: #555555;
-}
-
-
-/* =========================================================
-   11. HERO IMAGE
-   ========================================================= */
-
-.hero-image {
-    width: 70%;
-
-    min-height: 120px;
-
-    margin-bottom: 20px;
-
-    border: 2px solid #222222;
-
+.sidebar-decoration {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    background-color: #eeeeee;
-}
-
-.hero-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.hero-placeholder {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   12. NORMAL CONTENT IMAGES
-   ========================================================= */
-
-.content-area img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* =========================================================
-   13. RIGHT SIDEBAR
-   ========================================================= */
-
-.right-sidebar {
-    background-color: #ffffff;
-
-    border-left: 2px solid #222222;
-
-    padding: 40px 25px;
-}
-
-
-/* =========================================================
-   14. STICKY SIDEBAR CONTENT
-   ========================================================= */
-
-.sticky-content {
-    position: sticky;
-
-    top: 20px;
-}
-
-.sticky-content h2 {
-    margin-bottom: 15px;
-
+    gap: 10px;
+    color: #d783a1;
+    margin-top: 50px;
     font-size: 20px;
 }
 
-.sticky-content h3 {
-    margin-top: 20px;
-    margin-bottom: 8px;
 
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    padding: 0 45px;
+}
+
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid #f0e2e7;
+    scroll-margin-top: 30px;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section-label {
+    color: #c36489;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #513a43;
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 700px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 0;
+    border-bottom: 1px solid #f0e2e7;
+    scroll-margin-top: 30px;
+}
+
+.small-heading {
+    color: #c36489;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 7vw, 78px);
+    line-height: 0.95;
+    color: #a94f73;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 470px;
+    color: #705963;
     font-size: 16px;
+    margin-bottom: 30px;
 }
 
-.sticky-content ul {
-    list-style: none;
-}
-
-.sticky-content li {
-    margin-bottom: 7px;
-}
-
-.sticky-content a {
-    color: #111111;
-
-    text-decoration: none;
-}
-
-.sticky-content a:hover {
-    text-decoration: underline;
+.hero-flower {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #fbe4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c36489;
+    font-size: 90px;
+    transform: rotate(-10deg);
 }
 
 
-/* =========================================================
-   15. BUTTON
-   ========================================================= */
+/* =========================
+   BUTTON
+========================= */
 
 .button {
     display: inline-block;
-
-    padding: 9px 18px;
-
-    background-color: #111111;
-
-    color: #ffffff !important;
-
-    border: 2px solid #111111;
-
+    border: none;
+    cursor: pointer;
     text-decoration: none;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+    background-color: #b75f82;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
 }
 
 .button:hover {
-    background-color: #f8dfe8;
-
-    color: #111111 !important;
+    background-color: #984968;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(183, 95, 130, 0.2);
 }
 
 
-/* =========================================================
-   16. FOOTER
-   ========================================================= */
+/* =========================
+   ABOUT ME CARDS
+========================= */
 
-.site-footer {
-    min-height: 54px;
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
 
-    padding: 10px 25px;
+.info-card {
+    padding: 22px;
+    background-color: #fff6f9;
+    border: 1px solid #f0dce4;
+    border-radius: 12px;
+}
 
+.card-icon {
+    font-size: 23px;
+    color: #c36489;
+}
+
+.info-card h3 {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #5b414b;
+}
+
+.info-card p {
+    font-size: 13px;
+    color: #806a72;
+}
+
+
+/* =========================
+   ON CAMPUS
+========================= */
+
+.campus-section {
+    background-color: #fff;
+}
+
+.club-list {
+    margin-top: 35px;
+}
+
+.club {
     display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f1e3e8;
+}
 
+.club:last-child {
+    border-bottom: none;
+}
+
+.club-number {
+    min-width: 42px;
+    height: 42px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f8dce7;
+    color: #a94f73;
+    font-size: 12px;
+    font-weight: 700;
+}
 
-    flex-wrap: wrap;
+.club h3 {
+    color: #5a414b;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
 
-    border-top: 2px solid #222222;
-
-    background-color: #ffffff;
-
+.club p {
+    color: #806a72;
     font-size: 14px;
 }
 
-.site-footer a {
-    margin-left: 15px;
 
-    color: #111111;
+/* =========================
+   PASSIONS
+========================= */
 
+.passion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.passion-card {
+    padding: 25px;
+    background-color: #fff6f9;
+    border-radius: 12px;
+    border: 1px solid #f0dce4;
+}
+
+.passion-card span {
+    color: #c36489;
+    font-size: 25px;
+}
+
+.passion-card h3 {
+    color: #5a414b;
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+.passion-card p {
+    color: #806a72;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background-color: #fff9fb;
+    padding: 65px 30px;
+    border-radius: 15px;
+    margin: 50px 0;
+    border: 1px solid #f0dce4;
+}
+
+.contact-message {
+    margin-top: 20px;
+    color: #a94f73;
+    font-weight: 600;
+}
+
+
+/* =========================
+   RIGHT SIDEBAR
+========================= */
+
+.right-sidebar {
+    padding: 35px 20px;
+    border-left: 1px solid #ead7de;
+    background-color: #fff9fb;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 25px;
+}
+
+.sidebar-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c36489;
+    margin-bottom: 25px;
+}
+
+.quick-fact {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.quick-fact > span {
+    color: #c36489;
+    font-size: 18px;
+}
+
+.quick-fact strong {
+    display: block;
+    color: #5b414b;
+    font-size: 13px;
+}
+
+.quick-fact p {
+    color: #806a72;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5d5e1;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #a94f73;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: #f9e7ed;
+    color: #745964;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #745964;
     text-decoration: none;
 }
 
-.site-footer a:hover {
-    text-decoration: underline;
+.footer-links a:hover {
+    color: #a94f73;
 }
 
 
-/* =========================================================
-   17. TABLET
-   ========================================================= */
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-    .site-wrapper {
-        width: 90%;
+    .content-wrapper {
+        grid-template-columns: 160px 1fr;
     }
 
-    .site-header {
-        grid-template-columns: 25% 75%;
+    .right-sidebar {
+        display: none;
     }
 
-    .primary-navigation a {
-        padding: 5px 12px;
+    .navbar {
+        gap: 0;
     }
 
-    .secondary-navigation a {
-        padding: 4px 10px;
+    .nav-link {
+        padding: 8px 10px;
     }
 
-    .main-layout {
-        grid-template-columns: 70% 30%;
-    }
-
-    .hero-image {
-        width: 100%;
+    .main-content {
+        padding: 0 30px;
     }
 
 }
 
-
-/* =========================================================
-   18. MOBILE
-   ========================================================= */
 
 @media (max-width: 700px) {
 
-    /*
-     * On small screens the pink margins are reduced so
-     * the website remains usable.
-     */
-
-    .site-wrapper {
+    .page {
         width: 100%;
-
-        border-left: none;
-        border-right: none;
     }
 
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 15px;
+    }
 
-    /* Header becomes vertical */
+    .navbar {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-    .site-header {
+    .nav-link {
+        font-size: 12px;
+        padding: 7px 9px;
+    }
+
+    .content-wrapper {
+        display: block;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    .main-content {
+        padding: 0 22px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .hero-flower {
+        align-self: center;
+        width: 140px;
+        height: 140px;
+        font-size: 70px;
+    }
+
+    .info-cards,
+    .passion-grid {
         grid-template-columns: 1fr;
     }
 
-
-    /* Logo */
-
-    .logo-area {
-        min-height: 90px;
-
-        border-right: none;
-
-        border-bottom: 1px solid #222222;
-    }
-
-
-    /* Description */
-
-    .header-info {
-        justify-content: center;
-
-        text-align: center;
-
-        padding: 15px;
-    }
-
-
-    /* Navigation */
-
-    .primary-navigation ul,
-    .secondary-navigation ul {
-        justify-content: center;
-    }
-
-    .primary-navigation a {
-        padding: 7px 10px;
-
-        font-size: 14px;
-    }
-
-    .secondary-navigation a {
-        padding: 5px 10px;
-
-        font-size: 13px;
-    }
-
-
-    /* Main layout */
-
-    .main-layout {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* Content */
-
-    .content-area {
-        padding: 20px;
-    }
-
-
-    /* Hero */
-
-    .hero-image {
-        width: 100%;
-    }
-
-
-    /* Sidebar */
-
-    .right-sidebar {
-        border-left: none;
-
-        border-top: 2px solid #222222;
-
-        padding: 25px;
-    }
-
-
-    .sticky-content {
-        position: static;
-    }
-
-
-    /* Footer */
-
-    .site-footer {
-        justify-content: center;
-
-        text-align: center;
-    }
-
-    .site-footer a {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-}
-
-
-/* =========================================================
-   19. VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 450px) {
-
-    .primary-navigation ul,
-    .secondary-navigation ul {
+    footer {
         flex-direction: column;
-
-        width: 100%;
-    }
-
-    .primary-navigation li,
-    .secondary-navigation li {
-        width: 100%;
-    }
-
-    .primary-navigation a,
-    .secondary-navigation a {
-        width: 100%;
-
+        gap: 12px;
         text-align: center;
-
-        border-bottom: 1px solid #dddddd;
     }
 
-    .content-area h1 {
-        font-size: 24px;
-    }
-
-    .content-area h2 {
-        font-size: 20px;
-    }
-
-    .site-footer {
-        flex-direction: column;
-
-        gap: 6px;
-    }
-
-    .site-footer a {
-        margin: 0;
-    }
 }
