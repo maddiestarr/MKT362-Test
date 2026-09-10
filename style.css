@@ -1,6 +1,12 @@
-/* =========================================
-   GENERAL SETTINGS
-========================================= */
+/* =====================================================
+   MADELINE STARR WEBSITE
+   PINK WIREFRAME DESIGN
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -8,166 +14,542 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     font-family: "Quicksand", sans-serif;
 
-    /* Light pink background */
-    background-color: #fde8f1;
+    background: #f8dce8;
 
-    color: #5c3a49;
+    color: #634452;
 
     line-height: 1.6;
 }
 
 
-/* =========================================
-   MAIN WEBSITE
-========================================= */
+/* =====================================================
+   WEBSITE
+
+   80% width = approximately 10% background
+   on each side of the screen.
+===================================================== */
 
 .website {
+
     width: 80%;
+
     margin: 0 auto;
 
     min-height: 100vh;
 
-    background-color: #fffafd;
+    background: #fffdfd;
 
     box-shadow:
-        0 0 30px rgba(214, 105, 145, 0.12);
+        0 0 35px rgba(182, 85, 122, 0.15);
 }
 
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/* =====================================================
+   HEADER
 
-.site-nav {
-    width: 100%;
+   Matches the wireframe:
 
-    position: sticky;
-    top: 0;
+   ┌─────────┬─────────────────────┐
+   │  LOGO   │ Information         │
+   │         ├─────────────────────┤
+   │         │ Primary navigation  │
+   │         ├─────────────────────┤
+   │         │ Secondary navigation│
+   └─────────┴─────────────────────┘
+===================================================== */
 
-    z-index: 1000;
+.site-header {
 
-    background: rgba(255, 250, 253, 0.96);
+    display: grid;
 
-    backdrop-filter: blur(10px);
+    grid-template-columns: 20% 80%;
 
-    border-bottom: 2px solid #f6c6d9;
+    min-height: 145px;
 
-    box-shadow:
-        0 4px 15px rgba(190, 87, 127, 0.08);
+    border-bottom: 2px solid #e8b4c9;
 }
 
 
-/* Navigation contents */
+/* =====================================================
+   LOGO
+===================================================== */
 
-.nav-inner {
-    width: 100%;
+.logo-area {
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    padding: 15px 25px;
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff5f9;
+
+    border-right: 2px solid #e8b4c9;
+
+    padding: 15px;
 }
 
 
-/* Logo */
+.logo-area a {
 
-.nav-logo {
-    color: #d85c91;
+    display: flex;
 
-    font-size: 1.4rem;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #c95587;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.8rem;
+
+    line-height: 1;
+}
+
+
+.logo-heart {
+
+    font-size: 2.5rem;
+
+    color: #e38cae;
+
+    margin-bottom: 5px;
+}
+
+
+.logo-area small {
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #986779;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   RIGHT HEADER
+===================================================== */
+
+.header-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+/* =====================================================
+   INFORMATIONAL AREA
+===================================================== */
+
+.info-area {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 15px 25px;
+
+    background: #fffdfd;
+}
+
+
+.info-label {
+
+    color: #d06491;
+
+    font-size: 0.75rem;
 
     font-weight: 700;
 
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 2px;
+}
+
+
+.info-area h2 {
+
+    color: #704658;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 2px;
+}
+
+
+.info-area p:last-child {
+
+    color: #8c6977;
+
+    font-size: 0.78rem;
+}
+
+
+/* =====================================================
+   PRIMARY NAVIGATION
+   This is the main left-to-right navigation
+   requested by you.
+===================================================== */
+
+.primary-nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 34px;
+
+    background: #ffe7f0;
+
+    border-top: 2px solid #edbfd0;
+
+    border-bottom: 2px solid #edbfd0;
+
+    overflow-x: auto;
+}
+
+
+.primary-nav a {
+
+    color: #694354;
+
     text-decoration: none;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    padding: 5px 16px;
+
+    white-space: nowrap;
+
+    transition: all 0.2s ease;
+}
+
+
+.primary-nav a:hover {
+
+    color: #fff;
+
+    background: #d86a98;
+
+}
+
+
+/* =====================================================
+   SECONDARY NAVIGATION
+===================================================== */
+
+.secondary-nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    min-height: 30px;
+
+    background: #fff9fb;
+
+    overflow-x: auto;
+}
+
+
+.secondary-nav a {
+
+    color: #906878;
+
+    text-decoration: none;
+
+    font-size: 0.7rem;
 
     white-space: nowrap;
 }
 
 
-/* Navigation links */
+.secondary-nav a:hover {
 
-.nav-links {
-    display: flex;
+    color: #d05a89;
 
-    align-items: center;
-
-    justify-content: flex-end;
-
-    gap: 8px;
-
-    list-style: none;
 }
 
 
-.nav-links a {
-    color: #75485b;
+/* =====================================================
+   THREE COLUMN LAYOUT
+
+   THIS IS THE KEY PART OF THE WIREFRAME.
+
+   Left:   20%
+   Middle: 60%
+   Right:  20%
+===================================================== */
+
+.main-layout {
+
+    display: grid;
+
+    grid-template-columns: 20% 60% 20%;
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   LEFT SIDEBAR
+===================================================== */
+
+.left-sidebar {
+
+    min-height: 750px;
+
+    padding: 22px 15px;
+
+    background: #fff8fb;
+
+    border-right: 2px solid #e9bdcf;
+}
+
+
+.sidebar-heading {
+
+    color: #c75586;
+
+    text-align: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1rem;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 12px;
+
+    border-bottom: 2px dashed #edbfd0;
+}
+
+
+/* =====================================================
+   SIDE NAVIGATION
+===================================================== */
+
+.side-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.side-nav a {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
 
     text-decoration: none;
 
-    font-weight: 600;
+    color: #704657;
 
-    font-size: 0.95rem;
+    padding: 9px 6px;
 
-    padding: 9px 14px;
+    border-radius: 10px;
 
-    border-radius: 20px;
-
-    transition:
-        background-color 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
+    transition: all 0.2s ease;
 }
 
 
-.nav-links a:hover {
-    color: white;
+.side-nav a > span {
 
-    background-color: #e982ad;
+    color: #df7da4;
 
-    transform: translateY(-2px);
+    font-size: 1rem;
 }
 
 
-/* =========================================
-   HERO
-========================================= */
+.side-nav strong {
 
-.hero {
-    min-height: 380px;
+    display: block;
 
-    padding: 70px 8%;
+    font-size: 0.75rem;
+}
+
+
+.side-nav small {
+
+    display: block;
+
+    color: #a07988;
+
+    font-size: 0.62rem;
+
+    margin-top: 1px;
+}
+
+
+.side-nav a:hover {
+
+    background: #ffdfeb;
+
+    color: #c55284;
+
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   LEFT DECORATIONS
+===================================================== */
+
+.sidebar-decoration {
 
     display: flex;
 
+    flex-direction: column;
+
     align-items: center;
 
-    justify-content: space-between;
+    gap: 18px;
+
+    margin-top: 70px;
+
+    color: #eca4bd;
+
+    font-size: 1.3rem;
+}
+
+
+/* =====================================================
+   CENTER MAIN CONTENT
+===================================================== */
+
+.main-content {
+
+    background: #ffffff;
+
+    min-width: 0;
+}
+
+
+/* =====================================================
+   HERO IMAGE AREA
+
+   This corresponds to "Hero image at top"
+   in your original wireframe.
+===================================================== */
+
+.hero-image {
+
+    height: 175px;
+
+    margin: 20px;
+
+    position: relative;
 
     overflow: hidden;
+
+    border: 2px solid #edbfd0;
+
+    border-radius: 12px;
 
     background:
         linear-gradient(
             135deg,
-            #fff0f6,
-            #ffe1ed
+            #f2aac5 0%,
+            #ffdce9 50%,
+            #eaa0bc 100%
         );
 
-    border-bottom: 2px solid #f8cbdc;
+    display: flex;
 
-    position: relative;
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Decorative shapes */
+
+.hero-image::before {
+
+    content: "♡  ✿  ♡  ✿  ♡";
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: rgba(255,255,255,0.6);
+
+    font-size: 1.4rem;
+
+    letter-spacing: 10px;
+}
+
+
+.hero-image::after {
+
+    content: "✿  ♡  ✿";
+
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 20px;
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 1.2rem;
 }
 
 
 .hero-text {
-    max-width: 650px;
+
+    text-align: center;
+
+    color: white;
 
     position: relative;
 
@@ -175,237 +557,249 @@ body {
 }
 
 
-.small-heading {
-    color: #d85c91;
+.hero-text p {
 
-    font-weight: 700;
+    font-size: 0.75rem;
 
-    margin-bottom: 10px;
+    font-weight: 600;
+
+    margin-bottom: 3px;
 }
 
 
-.hero h1 {
-    color: #c94d82;
+.hero-text h1 {
 
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-family: "Playfair Display", serif;
+
+    font-size: 2.5rem;
 
     line-height: 1.1;
 
-    margin-bottom: 20px;
+    text-shadow:
+        0 2px 7px rgba(100,50,70,0.15);
 }
 
 
-.hero p:not(.small-heading) {
-    font-size: 1.1rem;
+.hero-text span {
 
-    color: #765264;
+    display: block;
 
-    margin-bottom: 25px;
+    font-size: 0.75rem;
+
+    margin-top: 7px;
+
+    letter-spacing: 1px;
 }
 
-
-/* Cute button */
-
-.cute-button {
-    display: inline-block;
-
-    text-decoration: none;
-
-    color: white;
-
-    background: #df709f;
-
-    padding: 12px 23px;
-
-    border-radius: 30px;
-
-    font-weight: 700;
-
-    box-shadow:
-        0 6px 15px rgba(211, 87, 137, 0.2);
-
-    transition: all 0.25s ease;
-}
-
-
-.cute-button:hover {
-    background: #c94d82;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 9px 20px rgba(211, 87, 137, 0.25);
-}
-
-
-/* Big decorative heart */
 
 .hero-decoration {
-    color: #f3a8c4;
 
-    font-size: 13rem;
+    position: absolute;
 
-    opacity: 0.45;
+    color: rgba(255,255,255,0.6);
 
-    transform: rotate(10deg);
-
-    user-select: none;
+    font-size: 2.5rem;
 }
 
 
-/* =========================================
+.hero-decoration.left {
+
+    left: 25px;
+
+    bottom: 30px;
+}
+
+
+.hero-decoration.right {
+
+    right: 35px;
+
+    top: 40px;
+}
+
+
+/* =====================================================
    CONTENT SECTIONS
-========================================= */
+===================================================== */
 
 .content-section {
-    padding: 70px 8%;
 
-    scroll-margin-top: 80px;
+    padding: 5px 25px 35px;
+
+    scroll-margin-top: 20px;
 }
 
 
-.section-title {
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
+
+.section-heading {
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    gap: 15px;
+    gap: 10px;
 
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
-    color: #cf5b8c;
+    padding-bottom: 8px;
+
+    border-bottom: 2px dashed #edbfd0;
 }
 
 
-.section-title h2 {
-    font-size: 2rem;
+.section-heading h2 {
+
+    color: #c95485;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.45rem;
 
     text-align: center;
 }
 
 
-.section-title span {
-    color: #e996b6;
+.section-heading span {
 
-    font-size: 1.4rem;
+    color: #e28aaa;
+
+    font-size: 1.1rem;
 }
 
 
-/* =========================================
-   CARDS
-========================================= */
+/* =====================================================
+   CONTENT CARDS
+===================================================== */
 
-.card {
-    background: white;
+.content-card {
 
-    border: 2px solid #f7d0df;
+    padding: 20px;
 
-    border-radius: 20px;
+    background: #fff9fb;
 
-    padding: 30px;
+    border: 1px solid #efc8d7;
+
+    border-radius: 12px;
 
     box-shadow:
-        0 8px 25px rgba(190, 87, 127, 0.08);
-
-    margin-bottom: 25px;
+        0 4px 15px rgba(180, 77, 119, 0.05);
 }
 
 
-.card p {
-    margin-bottom: 15px;
+.content-card p {
+
+    font-size: 0.85rem;
+
+    margin-bottom: 12px;
 }
 
 
-.card p:last-child {
+.content-card p:last-child {
+
     margin-bottom: 0;
 }
 
 
-/* =========================================
-   PICTURE SECTION
-========================================= */
+.content-card strong {
+
+    color: #c45082;
+}
+
+
+/* =====================================================
+   PICTURE CARD
+===================================================== */
 
 .picture-card {
+
     display: flex;
 
     align-items: center;
 
-    gap: 40px;
+    gap: 20px;
 
-    background: #fff;
+    padding: 20px;
 
-    border: 2px solid #f6cadb;
+    background: #fff9fb;
 
-    border-radius: 25px;
+    border: 1px solid #efc8d7;
 
-    padding: 35px;
-
-    box-shadow:
-        0 8px 25px rgba(190, 87, 127, 0.08);
+    border-radius: 12px;
 }
 
 
 .profile-picture {
-    width: 220px;
 
-    height: 220px;
+    width: 130px;
+
+    height: 130px;
+
+    flex-shrink: 0;
 
     object-fit: cover;
 
     border-radius: 50%;
 
-    border: 7px solid #f5b8cf;
+    border: 5px solid #f2b1c9;
 
-    padding: 5px;
+    padding: 3px;
 
-    background: #fff;
-
-    box-shadow:
-        0 8px 20px rgba(190, 87, 127, 0.15);
+    background: white;
 }
 
 
-.picture-card h3 {
-    color: #cf5b8c;
+.picture-description h3 {
 
-    font-size: 1.6rem;
+    color: #c95485;
 
-    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 5px;
 }
 
 
-/* =========================================
-   SCHOOL TITLE
-========================================= */
+.picture-description p {
 
-.title-card {
+    font-size: 0.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   SCHOOL CARD
+===================================================== */
+
+.school-card {
+
     display: flex;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 18px;
 
-    padding: 35px;
+    padding: 20px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff,
-            #fff0f6
-        );
+    background: #fff9fb;
 
-    border-radius: 25px;
+    border: 1px solid #efc8d7;
 
-    border: 2px solid #f6cadb;
+    border-radius: 12px;
 }
 
 
-.title-icon {
-    width: 90px;
+.school-icon {
 
-    height: 90px;
+    width: 65px;
+
+    height: 65px;
 
     flex-shrink: 0;
 
@@ -415,133 +809,393 @@ body {
 
     align-items: center;
 
-    background: #ffd5e5;
+    background: #ffdeea;
 
     border-radius: 50%;
 
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 }
 
 
-.title-card h3 {
-    color: #cf5b8c;
+.school-card h3 {
 
-    font-size: 1.5rem;
+    color: #c95485;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.05rem;
 
     margin-bottom: 5px;
 }
 
 
-/* =========================================
-   SCHOOL LIFE
-========================================= */
+.school-card p {
 
-.school-life-grid {
-    display: grid;
+    font-size: 0.78rem;
 
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
-
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
+
+/* =====================================================
+   SCHOOL LIFE CARDS
+===================================================== */
 
 .life-card {
-    background: white;
 
-    padding: 30px;
-
-    border-radius: 22px;
-
-    border: 2px solid #f6cadb;
-
-    text-align: center;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-
-.life-card:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 12px 25px rgba(190, 87, 127, 0.13);
-}
-
-
-.card-icon {
-    font-size: 2.5rem;
+    padding: 15px 18px;
 
     margin-bottom: 10px;
+
+    background: #fff9fb;
+
+    border-left: 4px solid #df82a7;
+
+    border-radius: 8px;
+
+    border-top: 1px solid #f1d0dc;
+
+    border-right: 1px solid #f1d0dc;
+
+    border-bottom: 1px solid #f1d0dc;
 }
 
 
 .life-card h3 {
-    color: #cf5b8c;
 
-    margin-bottom: 10px;
+    color: #c95485;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1rem;
+
+    margin-bottom: 3px;
 }
 
 
-.school-story h3 {
-    color: #cf5b8c;
+.life-card p {
 
-    margin-bottom: 15px;
-
-    font-size: 1.5rem;
+    font-size: 0.78rem;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* =====================================================
+   RIGHT SIDEBAR
 
-footer {
+   Matches "Sticky content" from wireframe.
+===================================================== */
+
+.right-sidebar {
+
+    min-height: 750px;
+
+    padding: 22px 15px;
+
+    background: #fff8fb;
+
+    border-left: 2px solid #e9bdcf;
+}
+
+
+/* =====================================================
+   STICKY CONTENT
+===================================================== */
+
+.sticky-content {
+
+    position: sticky;
+
+    top: 15px;
+}
+
+
+.sticky-content h2 {
+
+    color: #c95485;
+
+    font-family: "Playfair Display", serif;
+
     text-align: center;
 
-    padding: 30px;
+    font-size: 1rem;
 
-    color: #8b6473;
-
-    background: #ffeaf2;
-
-    border-top: 2px solid #f6cadb;
-
-    font-size: 0.9rem;
+    margin-bottom: 15px;
 }
 
 
-footer p {
-    margin: 4px 0;
+/* =====================================================
+   STICKY ITEMS
+===================================================== */
+
+.sticky-item {
+
+    display: flex;
+
+    gap: 8px;
+
+    align-items: flex-start;
+
+    padding: 10px 0;
+
+    border-bottom: 1px dashed #edbfd0;
 }
 
 
-/* =========================================
-   MOBILE RESPONSIVE DESIGN
-========================================= */
+.sticky-item > span {
 
-@media (max-width: 850px) {
+    font-size: 1.05rem;
+}
+
+
+.sticky-item strong {
+
+    display: block;
+
+    color: #704657;
+
+    font-size: 0.72rem;
+}
+
+
+.sticky-item p {
+
+    color: #896675;
+
+    font-size: 0.65rem;
+
+    line-height: 1.45;
+
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   FAVORITE BOX
+===================================================== */
+
+.favorite-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 20px;
+
+    padding: 12px 8px;
+
+    background: #ffe1ec;
+
+    border-radius: 10px;
+
+    color: #c95485;
+
+    text-align: center;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+
+.favorite-box span {
+
+    color: #df82a7;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    border-top: 2px solid #e9bdcf;
+
+    background: #ffe8f1;
+
+    text-align: center;
+
+    padding: 18px;
+
+    color: #80606e;
+
+    font-size: 0.7rem;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin: 7px 0;
+}
+
+
+.footer-links a {
+
+    color: #c95485;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.footer-links a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
 
     .website {
+
         width: 90%;
     }
 
 
-    .nav-inner {
-        flex-direction: column;
+    .main-layout {
 
-        gap: 10px;
-
-        padding: 12px;
+        grid-template-columns: 22% 56% 22%;
     }
 
 
-    .nav-links {
-        width: 100%;
+    .site-header {
+
+        grid-template-columns: 22% 78%;
+    }
+
+
+    .primary-nav a {
+
+        padding: 5px 8px;
+
+        font-size: 0.7rem;
+    }
+
+
+    .secondary-nav {
+
+        gap: 12px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 2rem;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    /*
+       The desktop wireframe has three columns.
+       On a phone, stacking them makes it readable
+       while keeping the same overall design.
+    */
+
+    .website {
+
+        width: 94%;
+    }
+
+
+    .site-header {
+
+        display: block;
+    }
+
+
+    .logo-area {
+
+        min-height: 90px;
+
+        border-right: none;
+
+        border-bottom: 2px solid #e9bdcf;
+    }
+
+
+    .info-area {
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 15px;
+    }
+
+
+    .primary-nav {
+
+        flex-wrap: wrap;
+
+        height: auto;
+
+        padding: 4px;
+    }
+
+
+    .primary-nav a {
+
+        padding: 5px 8px;
+
+        font-size: 0.68rem;
+    }
+
+
+    .secondary-nav {
+
+        flex-wrap: wrap;
+
+        height: auto;
+
+        padding: 5px;
+    }
+
+
+    .main-layout {
+
+        display: block;
+    }
+
+
+    .left-sidebar {
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom: 2px solid #e9bdcf;
+
+        padding: 15px;
+    }
+
+
+    .side-nav {
+
+        flex-direction: row;
 
         justify-content: center;
 
@@ -549,79 +1203,65 @@ footer p {
     }
 
 
-    .nav-links a {
-        font-size: 0.85rem;
+    .sidebar-decoration {
 
-        padding: 7px 10px;
-    }
-
-
-    .hero {
-        padding: 50px 8%;
-
-        text-align: center;
-
-        justify-content: center;
-    }
-
-
-    .hero-decoration {
         display: none;
     }
 
 
+    .hero-image {
+
+        height: 160px;
+
+        margin: 15px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 1.8rem;
+    }
+
+
+    .right-sidebar {
+
+        min-height: auto;
+
+        border-left: none;
+
+        border-top: 2px solid #e9bdcf;
+
+        padding: 20px;
+    }
+
+
+    .sticky-content {
+
+        position: static;
+    }
+
+
     .picture-card {
+
         flex-direction: column;
 
         text-align: center;
     }
 
 
-    .school-life-grid {
-        grid-template-columns: 1fr;
-    }
+    .school-card {
 
-
-    .title-card {
         flex-direction: column;
 
         text-align: center;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .website {
-        width: 94%;
     }
 
 
     .content-section {
-        padding: 50px 6%;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
     }
 
-
-    .nav-links {
-        gap: 2px;
-    }
-
-
-    .nav-links a {
-        font-size: 0.75rem;
-
-        padding: 6px 8px;
-    }
-
-
-    .profile-picture {
-        width: 170px;
-
-        height: 170px;
-    }
-
-
-    .section-title h2 {
-        font-size: 1.6rem;
-    }
 }
