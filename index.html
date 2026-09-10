@@ -1,222 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My School Life</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Madeline Starr | Marketing & Real Estate</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Your CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- Navigation will automatically appear here -->
-    <div id="site-navigation"></div>
+    <!-- =========================================
+         WEBSITE CONTAINER
+         ========================================= -->
+
+    <div class="website">
 
 
-    <!-- Main Website Container -->
-    <main class="website">
+        <!-- =====================================
+             HEADER
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-text">
-                <p class="small-heading">♡ welcome to my website ♡</p>
+             nav.js creates:
+             - logo
+             - informational area
+             - primary navigation
+             - secondary navigation
+             ===================================== -->
 
-                <h1>My School Life</h1>
-
-                <p>
-                    A little space to share who I am, what I do at school,
-                    and some of my favorite memories.
-                </p>
-
-                <a href="#about" class="cute-button">Get to know me ♡</a>
-            </div>
-
-            <div class="hero-decoration">
-                ♡
-            </div>
-        </section>
+        <div id="site-navigation"></div>
 
 
-        <!-- About Me -->
-        <section id="about" class="content-section">
-            <div class="section-title">
-                <span>♡</span>
-                <h2>About Me</h2>
-                <span>♡</span>
-            </div>
+        <!-- =====================================
+             THREE COLUMN MAIN AREA
+             ===================================== -->
 
-            <div class="card">
-                <p>
-                    Hi! My name is <strong>Your Name</strong>. Welcome to my
-                    personal website! This is a place where I can introduce
-                    myself, share a little about my school experience, and
-                    show some of the things that are important to me.
-                </p>
-
-                <p>
-                    I enjoy learning new things, spending time with my friends,
-                    and making memories at school. I created this website to
-                    tell my story and give visitors a small look into my life.
-                </p>
-            </div>
-        </section>
+        <div class="main-layout">
 
 
-        <!-- My Picture -->
-        <section id="picture" class="content-section picture-section">
+            <!-- =================================
+                 LEFT COLUMN
+                 Matches the left navigation
+                 area in the wireframe
+                 ================================= -->
 
-            <div class="section-title">
-                <span>♡</span>
-                <h2>My Picture</h2>
-                <span>♡</span>
-            </div>
+            <aside class="left-sidebar">
 
-            <div class="picture-card">
+                <div class="sidebar-heading">
+                    ♡ Explore My Site
+                </div>
 
-                <!-- Replace this image with your own -->
-                <img
-                    src="images/my-picture.jpg"
-                    alt="A picture of me"
-                    class="profile-picture"
+                <div id="side-navigation"></div>
+
+
+                <div class="sidebar-decoration">
+
+                    <span>♡</span>
+
+                    <span>✿</span>
+
+                    <span>♡</span>
+
+                    <span>🎀</span>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =================================
+                 CENTER MAIN CONTENT
+                 ================================= -->
+
+            <main class="main-content">
+
+
+                <!-- HERO IMAGE AREA -->
+
+                <section class="hero-image">
+
+                    <div class="hero-decoration left">
+                        ✿
+                    </div>
+
+                    <div class="hero-text">
+
+                        <p>
+                            ♡ Welcome to my little corner of the internet ♡
+                        </p>
+
+                        <h1>
+                            Madeline Starr
+                        </h1>
+
+                        <span>
+                            Marketing • Sales • Real Estate
+                        </span>
+
+                    </div>
+
+                    <div class="hero-decoration right">
+                        ♡
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     ABOUT ME
+                     ================================= -->
+
+                <section
+                    id="about"
+                    class="content-section"
                 >
 
-                <div>
-                    <h3>That's me! ♡</h3>
+                    <div class="section-heading">
 
-                    <p>
-                        This is a picture of me. You can replace this photo
-                        with your favorite picture by adding it to the
-                        <strong>images</strong> folder.
-                    </p>
+                        <span>♡</span>
+
+                        <h2>About Me</h2>
+
+                        <span>♡</span>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <p>
+                            Hi! My name is
+                            <strong>Madeline Starr</strong>,
+                            and I am a senior at Iowa State University.
+                            I am majoring in
+                            <strong>Marketing</strong> and am also
+                            pursuing my
+                            <strong>Professional Sales Certificate</strong>.
+                        </p>
+
+                        <p>
+                            I have always enjoyed connecting with people,
+                            learning how businesses grow, and understanding
+                            what motivates people to make decisions. My
+                            experiences at Iowa State have allowed me to
+                            explore those interests while developing my
+                            communication, sales, leadership, and
+                            relationship-building skills.
+                        </p>
+
+                        <p>
+                            Outside of the classroom, I am involved in several
+                            organizations on campus. I am a member of
+                            <strong>Delta Zeta Sorority</strong>,
+                            <strong>Sales Club</strong>,
+                            <strong>Marketing Club</strong>, and the
+                            <strong>Real Estate Development Club</strong>.
+                            These organizations have given me opportunities
+                            to meet new people, build professional
+                            relationships, and grow as a leader.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     MY PICTURE
+                     ================================= -->
+
+                <section
+                    id="picture"
+                    class="content-section"
+                >
+
+                    <div class="section-heading">
+
+                        <span>♡</span>
+
+                        <h2>My Picture</h2>
+
+                        <span>♡</span>
+
+                    </div>
+
+
+                    <div class="picture-card">
+
+                        <!--
+                            Put your picture inside the images folder
+                            and name it:
+
+                            madeline.jpg
+                        -->
+
+                        <img
+                            src="images/madeline.jpg"
+                            alt="Madeline Starr"
+                            class="profile-picture"
+                        >
+
+
+                        <div class="picture-description">
+
+                            <h3>
+                                Nice to meet you! 🎀
+                            </h3>
+
+                            <p>
+                                I am a senior at Iowa State University
+                                studying Marketing and earning my
+                                Professional Sales Certificate.
+                            </p>
+
+                            <p>
+                                I am passionate about building relationships,
+                                learning about business, and creating a
+                                career in real estate.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     SCHOOL TITLE
+                     ================================= -->
+
+                <section
+                    id="school"
+                    class="content-section"
+                >
+
+                    <div class="section-heading">
+
+                        <span>♡</span>
+
+                        <h2>My Title in School</h2>
+
+                        <span>♡</span>
+
+                    </div>
+
+
+                    <div class="school-card">
+
+                        <div class="school-icon">
+                            🎓
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Senior at Iowa State University
+                            </h3>
+
+                            <p>
+                                <strong>Major:</strong>
+                                Marketing
+                            </p>
+
+                            <p>
+                                <strong>Certificate:</strong>
+                                Professional Sales Certificate
+                            </p>
+
+                            <p>
+                                I am building a strong foundation in
+                                marketing, professional sales, communication,
+                                and business while preparing for my future
+                                career.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     MY LIFE IN SCHOOL
+                     ================================= -->
+
+                <section
+                    id="life"
+                    class="content-section"
+                >
+
+                    <div class="section-heading">
+
+                        <span>♡</span>
+
+                        <h2>My Life in School</h2>
+
+                        <span>♡</span>
+
+                    </div>
+
+
+                    <div class="life-card">
+
+                        <h3>
+                            ♡ Delta Zeta
+                        </h3>
+
+                        <p>
+                            Being a member of Delta Zeta has given me
+                            meaningful friendships, leadership experiences,
+                            and a community that has made my college
+                            experience special.
+                        </p>
+
+                    </div>
+
+
+                    <div class="life-card">
+
+                        <h3>
+                            ♡ Sales Club
+                        </h3>
+
+                        <p>
+                            Sales Club allows me to develop my professional
+                            sales skills, practice communication, and learn
+                            more about careers in sales and business.
+                        </p>
+
+                    </div>
+
+
+                    <div class="life-card">
+
+                        <h3>
+                            ♡ Marketing Club
+                        </h3>
+
+                        <p>
+                            Through Marketing Club, I am able to explore
+                            different areas of marketing and learn from
+                            experiences outside of the classroom.
+                        </p>
+
+                    </div>
+
+
+                    <div class="life-card">
+
+                        <h3>
+                            ♡ Real Estate Development Club
+                        </h3>
+
+                        <p>
+                            Real Estate Development Club has helped me
+                            explore my interest in real estate and learn
+                            more about the industry I hope to enter after
+                            graduation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <h3>
+                            My Future Goals ♡
+                        </h3>
+
+                        <p>
+                            In the future, I want to pursue a career in
+                            <strong>residential new construction real
+                            estate</strong>. I am especially interested in
+                            the process of creating new homes, connecting
+                            with clients, and helping people find or build
+                            a place they are proud to call home.
+                        </p>
+
+                        <p>
+                            My marketing education, professional sales
+                            experience, and involvement in real estate
+                            organizations are helping me prepare for this
+                            career goal.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+
+
+            <!-- =================================
+                 RIGHT SIDEBAR
+                 Matches "Sticky Content"
+                 in wireframe
+                 ================================= -->
+
+            <aside class="right-sidebar">
+
+                <div class="sticky-content">
+
+                    <h2>
+                        ♡ A Little About Me
+                    </h2>
+
+
+                    <div class="sticky-item">
+
+                        <span>🎓</span>
+
+                        <div>
+                            <strong>Education</strong>
+
+                            <p>
+                                Iowa State University
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sticky-item">
+
+                        <span>📚</span>
+
+                        <div>
+                            <strong>Major</strong>
+
+                            <p>
+                                Marketing
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sticky-item">
+
+                        <span>💼</span>
+
+                        <div>
+                            <strong>Certificate</strong>
+
+                            <p>
+                                Professional Sales
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sticky-item">
+
+                        <span>🏠</span>
+
+                        <div>
+                            <strong>Future Career</strong>
+
+                            <p>
+                                Residential New Construction Real Estate
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sticky-item">
+
+                        <span>🎀</span>
+
+                        <div>
+                            <strong>Organizations</strong>
+
+                            <p>
+                                Delta Zeta<br>
+                                Sales Club<br>
+                                Marketing Club<br>
+                                Real Estate Development Club
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="favorite-box">
+
+                        <span>♡</span>
+
+                        <p>
+                            Future Real Estate Professional
+                        </p>
+
+                        <span>♡</span>
+
+                    </div>
+
                 </div>
 
-            </div>
-        </section>
+            </aside>
 
 
-        <!-- School Title -->
-        <section id="school" class="content-section">
-
-            <div class="section-title">
-                <span>♡</span>
-                <h2>My Title in School</h2>
-                <span>♡</span>
-            </div>
-
-            <div class="title-card">
-
-                <div class="title-icon">
-                    🎀
-                </div>
-
-                <div>
-                    <h3>My School Title</h3>
-
-                    <p>
-                        <strong>Student</strong>
-                    </p>
-
-                    <p>
-                        I am currently a student at
-                        <strong>Your School Name</strong>.
-                        My school experience has helped me learn,
-                        grow, meet new people, and discover new interests.
-                    </p>
-                </div>
-
-            </div>
-        </section>
+        </div>
 
 
-        <!-- School Life -->
-        <section id="life" class="content-section">
 
-            <div class="section-title">
-                <span>♡</span>
-                <h2>My Life in School</h2>
-                <span>♡</span>
-            </div>
+        <!-- =====================================
+             FOOTER
+             ===================================== -->
 
-            <div class="school-life-grid">
-
-                <article class="life-card">
-                    <div class="card-icon">📚</div>
-                    <h3>Learning</h3>
-                    <p>
-                        School gives me opportunities to learn new subjects
-                        and develop skills that I can use in the future.
-                    </p>
-                </article>
-
-                <article class="life-card">
-                    <div class="card-icon">🌸</div>
-                    <h3>Friends</h3>
-                    <p>
-                        One of my favorite parts of school is spending time
-                        with friends and creating fun memories together.
-                    </p>
-                </article>
-
-                <article class="life-card">
-                    <div class="card-icon">✨</div>
-                    <h3>Activities</h3>
-                    <p>
-                        I enjoy taking part in activities and experiences
-                        that make school more interesting and enjoyable.
-                    </p>
-                </article>
-
-            </div>
-
-            <div class="card school-story">
-
-                <h3>My School Story ♡</h3>
-
-                <p>
-                    My life in school has been filled with different
-                    experiences, challenges, friendships, and achievements.
-                    Every year gives me a chance to learn something new and
-                    become a better version of myself.
-                </p>
-
-                <p>
-                    There are days when school can be challenging, but there
-                    are also many moments that make me smile. Whether I am
-                    working on a project, learning something interesting,
-                    talking with friends, or participating in an activity,
-                    each experience becomes part of my school story.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Footer -->
         <footer>
 
             <p>
-                Made with ♡ by Your Name
+                Made with ♡ by Madeline Starr
             </p>
 
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#about">
+                    About Me
+                </a>
+
+                <a href="index.html#picture">
+                    My Picture
+                </a>
+
+                <a href="index.html#school">
+                    School
+                </a>
+
+                <a href="index.html#life">
+                    My Life
+                </a>
+
+            </div>
+
             <p>
-                © 2026 My School Life
+                © 2026 Madeline Starr
             </p>
 
         </footer>
 
-    </main>
+    </div>
 
-    <!-- Navigation JavaScript -->
+
+
+    <!-- Shared Navigation -->
     <script src="nav.js"></script>
 
 </body>
+
 </html>
