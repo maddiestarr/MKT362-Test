@@ -69,15 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <li>
 
-                        <a href="index.html#picture">
-                            My Picture
-                        </a>
-
-                    </li>
-
-
-                    <li>
-
                         <a href="index.html#education">
                             My Education
                         </a>
